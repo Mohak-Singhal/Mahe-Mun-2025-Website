@@ -91,8 +91,8 @@ const Team = () => {
     
 
     return (
-        <div>
-            <div className="header-container">
+        <div className="p-5">
+            <div className="header-container ">
                 <div>
                     <h1 className="heading">Meet Our Team</h1>
                     <div className="divider"></div>
