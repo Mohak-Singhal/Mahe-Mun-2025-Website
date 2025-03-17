@@ -1,8 +1,6 @@
-import React from 'react';
-import StackedScroll from '../components/Stack';
 
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <>
       <div 
@@ -20,9 +18,9 @@ const Home = () => {
         <p className='text-right'> Welcome to the MAHE version of the Model United</p>
        
       </div>
-      <StackedScroll />
+      {/* <StackedScroll /> */}
     </>
   );
 };
 
-export default Home;
+export default HomeScreen;
