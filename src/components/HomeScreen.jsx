@@ -1,11 +1,15 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const HomeScreen = () => {
   return (
+    <>
+    <Navbar classname="text-white" />
     <div 
       className="h-screen flex flex-col items-center justify-center bg-cover bg-center text-white px-4 sm:px-8"
-      style={{ backgroundImage: "url('/mahe.jpg')" }}
+      // style={{ backgroundImage: "url('/mahe.jpg')" }} 
     >
+      
       {/* Main Title & Logo Container */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center text-center sm:text-left">
         {/* Title */}
@@ -31,6 +35,7 @@ const HomeScreen = () => {
         Welcome to the MAHE version of the Model United Nations.
       </p>
     </div>
+    </>
   );
 };
 

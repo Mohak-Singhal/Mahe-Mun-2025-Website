@@ -14,6 +14,7 @@ import { div, h1 } from "framer-motion/client";
 import ConferenceHighlights from "./ConferenceHighlights";
 import Home from "../pages/Home";
 import HomeScreen from "./HomeScreen";
+import Footer from "./Footer";
 
 // ✅ HighlightBox Component
 const HighlightBox = ({ icon, text }) => (
@@ -25,7 +26,7 @@ const HighlightBox = ({ icon, text }) => (
 
 // ✅ LetterSection Component
 const LetterSection = () => (
-  <div className="px-6 md:px-12 lg:px-10 w-full max-w-6xl mx-auto">
+  <div className=" px-6 md:px-12 lg:px-10 w-full max-w-6xl mx-auto">
     {/* Title */}
     <h1 className="mt-12 text-4xl md:text-6xl lg:text-[70px] font-medium text-center md:text-left">
       Letter From The Secretary-General
@@ -162,23 +163,24 @@ const sections = [
   {
     id: 1,
     content: <HomeScreen />,
-    classname: "bg-gray-200 h-auto md:h-screen",
+    classname: "h-auto md:h-screen bg-cover bg-center",
+  style: { backgroundImage: "url('/mahe.jpg')" }
   },
-  { id: 2, content: <LetterSection />, classname: "bg-gray-200 p-4 sm:p-8" },
+  { id: 2, content: <LetterSection />, classname: "rounded-t-[7%] bg-gray-200 p-4 sm:p-8" },
   {
     id: 3,
     content: <ConferenceHighlights />,
-    classname: "bg-black h-auto md:h-screen p-4 sm:p-8",
+    classname: "rounded-t-[7%] bg-black h-auto md:h-screen p-4 sm:p-8",
   },
   {
     id: 4,
     content: <MunStats />,
-    classname: "bg-[#f2eaea] h-auto md:h-screen p-4 sm:p-8",
+    classname: "rounded-t-[7%] bg-[#f2eaea] h-auto md:h-screen p-4 sm:p-8",
   },
   {
     id: 5,
     content: <FullImage src="/mun.jpg" />,
-    classname: "h-auto md:h-screen",
+    classname: "rounded-t-[7%] h-auto md:h-screen",
   },
   { id: 6, content: <DelegatePage />, classname: "h-auto md:h-screen" },
 ];
@@ -193,6 +195,9 @@ const StackedScroll = () => {
   const statsY = useTransform(scrollYProgress, [0.5, 0.7], ["100vh", "25vh"]);
   const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]);
   const delegateY = useTransform(scrollYProgress, [0.85, 1], ["100vh", "0vh"]);
+  const footerOpacity = useTransform(scrollYProgress, [0.98, 1], [0, 1]); // Fade in AFTER delegate page
+  const footerTranslateY = useTransform(scrollYProgress, [0.98, 1], [50, 0]); // Moves up smoothly
+
 
   return (
     <div className="min-h-screen max-w-full bg-gradient-to-b from-gray-50 to-white">
@@ -229,7 +234,8 @@ const StackedScroll = () => {
               style={{ y: translateY }}
             >
               <div
-                className={`rounded-t-[7%] shadow-xl flex flex-col w-full ${section.classname} text-black`}
+               style={section.style}
+                className={`shadow-xl flex flex-col w-full ${section.classname} text-black`}
               >
                 {section.content}
               </div>
@@ -237,6 +243,12 @@ const StackedScroll = () => {
           );
         })}
       </ul>
+      <motion.div
+        className="fixed bottom-0 w-full"
+        style={{ opacity: footerOpacity, y: footerTranslateY }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 };

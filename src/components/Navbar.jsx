@@ -2,27 +2,27 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // Icon package for mobile menu
 
-const Navbar = () => {
+const Navbar = ({classname}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Navigation items stored as an array of objects
   const navLinks = [
-    { name: "ABOUT US", path: "/about" },
+    
     { name: "TEAM", path: "/team" },
-    { name: "CAREER", path: "/career" },
     { name: "NEWS", path: "/news" },
-    { name: "FAQ", path: "/faq" },
-    { name: "CONTACT US", path: "/contact" },
     { name: "GALLERY", path: "/gallery" },
+    { name: "ABOUT US", path: "/about" },
+    { name: "CONTACT US", path: "/contact" },
+
   ];
 
   return (
-    <nav className="bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
+    <nav className={`${classname}`}>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-8">
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src="/logo.jpg" alt="Logo" className="h-12" />
+            <img src="/logo.jpg" alt="Logo" className="h-15" />
           </Link>
         </div>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Register Button */}
         <Link
           to="/register"
-          className="hidden md:flex items-center bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition"
+          className="hidden md:flex items-center bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition"
         >
           REGISTER
           <span className="ml-2">↗</span>
