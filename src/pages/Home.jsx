@@ -1,5 +1,6 @@
 import React from 'react';
 import StackedScroll from './News';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <h1 className="text-white font-bold">MAHE-MUN</h1>
       </div>
       <StackedScroll />
+      <Footer />
     </>
   );
 };
