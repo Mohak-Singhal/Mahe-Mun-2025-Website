@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
         {/* Logo Image */}
         <img 
-          src="/logo.jpg" 
+          src="/logo2.png" 
           alt="Logo" 
           className="mt-6 sm:mt-0 sm:ml-12 h-24 sm:h-32 md:h-40 lg:h-48"
         />
