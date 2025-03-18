@@ -22,6 +22,7 @@ body {
   margin-left: 15px;
 }
 
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -106,13 +107,28 @@ body {
 }
 
 .modal-content {
+  width: 80%; /* Increase modal width */
+  max-height: 95vh; /* Increase max height */
+  padding: 25px;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 80%;
-  width: 600px;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance appearance */
+  overflow: hidden;
 }
+
+.modal-header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  max-height: 60vh; /* Increase text area */
+  overflow-y: auto; /* Enable scrolling for long content */
+  padding-right: 10px;
+}
+
 
 .close-btn {
   position: absolute;
