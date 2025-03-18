@@ -22,12 +22,12 @@ const Navbar = ({classname}) => {
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src="/logo.jpg" alt="Logo" className="h-15" />
+            <img src="/logo2.png" alt="Logo" className="h-20" />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8 text-lg font-medium">
+        <ul className="hidden md:flex space-x-8 text-lg font-medium ">
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link to={link.path} className="hover:text-gray-300">
