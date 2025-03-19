@@ -18,7 +18,7 @@ const Navbar = ({classname}) => {
 
   return (
     <nav className={`${classname}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-8">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
         {/* Logo */}
         <div>
           <Link to="/">

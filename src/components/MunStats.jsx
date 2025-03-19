@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { WavyText } from "./textanimation";
 
 
 const stats = [
@@ -18,9 +19,9 @@ const MunStats = () => {
 
     <div className="w-full bg-[#f2eaea] py-10 px-4 sm:px-8 lg:px-16">
       {/* Section Heading */}
-      <h2 className="text-center text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold text-black leading-tight">
-        Our Diverse Participants
-      </h2>
+      <WavyText className="text-center text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold text-black leading-tight"
+        text="Our Diverse Participants"
+      />
 
       {/* Animated Stats Grid */}
       <motion.div
