@@ -196,7 +196,7 @@ const sections = [
     id: 1,
     content: <HomeScreen />,
     classname: "h-auto md:h-screen bg-cover bg-center",
-    style: { backgroundImage: "url('/mahe.jpg')" },
+    style: { backgroundImage: "url('/mahe2.png')" },
   },
   {
     id: 2,
