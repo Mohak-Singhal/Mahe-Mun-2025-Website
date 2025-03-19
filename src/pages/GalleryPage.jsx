@@ -1,63 +1,89 @@
 import React from 'react';
 import './GalleryPage.css';
 
-const imageModules = import.meta.glob('./gallery_images/*.{png,jpg,jpeg,svg}', { eager: true });
+const imageModules = import.meta.glob('./gallery_images/**/*.{png,jpg,jpeg,svg}', { eager: true });
 const allImages = {};
+
 for (const path in imageModules) {
-  const fileName = path.replace('./gallery_images/', '');
+  const fileName = path.replace('./gallery_images/', '').toLowerCase();
   allImages[fileName] = imageModules[path].default || imageModules[path];
 }
 
-//Different sections
+const getImagesFromFolder = (folderName) => {
+  const lowerFolder = folderName.toLowerCase();
+  const images = Object.keys(allImages)
+    .filter(key => key.startsWith(`${lowerFolder}/`))
+    .map(key => ({
+      fileName: key,
+      alt: `${folderName} Image`,
+    }));
+  if (images.length === 0) {
+    console.warn(`No images found in folder: ${folderName}`);
+  }
+  return images;
+};
+
 const sectionsData = [
   {
-    title: 'Committee Sessions',
-    images: [
-      { fileName: '1.jpg', alt: 'Committee Session 1' },
-      { fileName: '2.jpg', alt: 'Committee Session 2' },
-      { fileName: '6.jpeg', alt: 'Committee Session 2' },
-      { fileName: '7.jpeg', alt: 'Committee Session 2' },
-      { fileName: '8.jpeg', alt: 'Committee Session 2' },
+    title: 'January Conference',
+    subsections: [
+      {
+        title: 'Committee Session',
+        images: getImagesFromFolder('jan_committee_sessions'),
+      },
+      {
+        title: 'Cultural Night',
+        images: getImagesFromFolder('jan_cultural_night'),
+      },
     ],
   },
   {
-    title: 'General Assembly',
-    images: [
-      { fileName: '3.jpg', alt: 'General Assembly 1' },
-      { fileName: '4.jpg', alt: 'General Assembly 2' },
-      { fileName: '9.jpeg', alt: 'Committee Session 2' },
-      { fileName: '10.jpeg', alt: 'Committee Session 2' },
-      { fileName: '8.jpeg', alt: 'Committee Session 2' },
-    ],
+    title: 'Officiating Ceremony',
+    images: getImagesFromFolder('officiating_ceremony'),
   },
   {
-    title: 'Social Events',
-    images: [
-      { fileName: '5.jpg', alt: 'Social Event' },
-      { fileName: '11.jpeg', alt: 'Committee Session 2' },
-      { fileName: '8.jpeg', alt: 'Committee Session 2' },
-    ],
+    title: 'Constitution Ceremony',
+    images: getImagesFromFolder('constitution_ceremony'),
   },
 ];
 
-const GallerySection = ({ title, images }) => (
+const GallerySection = ({ title, images, subsections }) => (
   <section className="gallery-section">
     <h2 className="gallery-section-title">{title}</h2>
-    <div className="gallery-grid">
-      {images.map((image, index) => (
-        <div key={index} className="gallery-card">
-          <img
-            src={allImages[image.fileName]}
-            alt={image.alt}
-            className="gallery-image"
-            loading="lazy"
-          />
-          <div className="card-content">
-            {/* caption if needed */}
+    {subsections ? (
+      subsections.map((sub, index) => (
+        <div key={index}>
+          <h3 className="gallery-subsection-title">{sub.title}</h3>
+          <div className="gallery-grid">
+            {sub.images.map((image, idx) => (
+              <div key={idx} className="gallery-card">
+                <img
+                  src={allImages[image.fileName]}
+                  alt={image.alt}
+                  className="gallery-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
+      ))
+    ) : (
+      <div className="gallery-grid">
+        {images.map((image, index) => (
+          <div key={index} className="gallery-card">
+            <img
+              src={allImages[image.fileName]}
+              alt={image.alt}
+              className="gallery-image"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    )}
   </section>
 );
 
@@ -65,7 +91,12 @@ const GalleryPage = () => {
   return (
     <div className="gallery-page">
       {sectionsData.map((section, index) => (
-        <GallerySection key={index} title={section.title} images={section.images} />
+        <GallerySection
+          key={index}
+          title={section.title}
+          images={section.images}
+          subsections={section.subsections}
+        />
       ))}
     </div>
   );
