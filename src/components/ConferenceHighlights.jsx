@@ -1,5 +1,6 @@
 import React from "react";
 import { Package, Layers, Smile, Command } from "lucide-react";
+import { WavyText } from "./textanimation";
 
 const highlights = [
   {
@@ -31,10 +32,11 @@ const highlights = [
 const ConferenceHighlights = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col items-center py-16 px-6">
-      {/* Title - Left aligned */}
-      <div className="w-full max-w-6xl">
-        <h1 className="text-[50px]  font-semibold leading-[1.1] ">CONFERENCE <br/>HIGHLIGHTS</h1>
-      </div>
+      
+      <WavyText
+        text="CONFERENCE HIGHLIGHTS"
+        className="text-[50px] text-left font-semibold leading-[1.1]"
+      />
 
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 max-w-6xl">
