@@ -14,6 +14,7 @@ import { div, h1 } from "framer-motion/client";
 import ConferenceHighlights from "./ConferenceHighlights";
 import Home from "../pages/Home";
 import HomeScreen from "./HomeScreen";
+import Footer from "./Footer";
 
 // ✅ HighlightBox Component
 const HighlightBox = ({ icon, text }) => (
@@ -24,15 +25,15 @@ const HighlightBox = ({ icon, text }) => (
 );
 
 // ✅ LetterSection Component
-const LetterSection = () => (
-  <div className="px-6 md:px-12 lg:px-10 w-full max-w-6xl mx-auto">
+const LetterSectionGenSec = () => (
+  <div className=" px-6 md:px-12  w-full max-w-6xl mx-auto">
     {/* Title */}
-    <h1 className="mt-12 text-4xl md:text-6xl lg:text-[70px] font-medium text-center md:text-left">
+    <h1 className="mt-8 text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left">
       Letter From The Secretary-General
     </h1>
 
     {/* Letter Content */}
-    <p className="mt-6 text-gray-700 text-sm md:text-base  text-justify">
+    <p className="mt-6 text-gray-700 text-sm   text-justify">
       <strong>Dearest Delegates,</strong>
       <br />
       <br />
@@ -107,6 +108,53 @@ const LetterSection = () => (
     </p>
   </div>
 );
+const LetterSection = () => (
+  <div className="px-6 md:px-12  w-full max-w-6xl mx-auto">
+    {/* Title */}
+    <h1 className="mt-8 text-4xl md:text-6xl lg:text-[70px] font-medium text-center md:text-left">
+      Letter From The President
+    </h1>
+
+    {/* Letter Content */}
+    <p className="mt-6 text-gray-700 text-sm  text-justify">
+      <strong>Esteemed Delegates,</strong>
+      <br />
+      <br />
+      Every great movement begins with an idea, a vision bold enough to challenge the status quo. MAHE Model United Nations 2025 is not just a conference—it is a powerhouse of intellect, diplomacy, and leadership. This August, as we bring together some of the sharpest minds from across the nation, we are not just debating policies; we are shaping the future of global discourse.
+      <br />
+      <br />
+      I am <strong>Riya Singh</strong>, and I have the privilege of serving as your President for this landmark edition of MAHE MUN. My journey in public speaking, strategic leadership, and multifaceted management has taught me one fundamental truth: Excellence is never accidental—it is engineered. And this conference is a testament to that principle.
+      <br />
+      <br />
+      Behind this grand endeavor stands a formidable team of individuals who bring their passion, dedication, and expertise to every aspect of this conference. The Board of Directors provides the strategic vision that drives MAHE MUN forward, while our 40+ Executive Board Members work relentlessly to ensure that every committee delivers the intensity and intellectual rigor that defines this conference. Alongside them, a 30+ member Secretariat has spent countless hours shaping an event that goes beyond just debate—it is a true simulation of global diplomacy. And at the heart of it all, our 80+ Organizing Committee Members work tirelessly behind the scenes to make sure that every detail is executed with precision. Together, we are not just hosting an event; we are redefining what an MUN can be.
+      <br />
+      <br />
+      With <strong>15 dynamic committees</strong>, this conference is designed to push boundaries, provoke thought, and create an environment where diplomacy thrives. Whether you find yourself negotiating peace, tackling pressing global crises, or drafting policies that could reshape the future, you will be stepping into a space that demands nothing less than excellence. Expect thought-provoking discussions, diplomatic breakthroughs, and resolutions that go beyond the ordinary. Whether you are here to challenge, collaborate, or champion a cause, one thing is certain—you will leave this conference transformed.
+      <br />
+      <br />
+      As we prepare to welcome you to Manipal, I leave you with one thought: Leadership is not about speaking the loudest; it is about making the most impact. So step forward, engage fearlessly, and let this conference be the stage where your ideas take flight.
+      <br />
+      <br />
+      The Secretariat and I stand ready to make this an unforgettable experience for you. Should you have any queries or need any assistance, please do not hesitate to reach out. I look forward to seeing each and every one of you bring your passion, intellect, and diplomatic prowess to MAHE MUN 2025.
+      <br />
+      <br />
+      <strong>With ambition and anticipation,</strong>
+      <br />
+      <strong>Riya Singh</strong>
+      <br />
+      <strong>President</strong>
+      <br />
+      <strong>MAHE MUN Student Organization</strong>
+      <br />
+      <a
+        href="mailto:riya.mcopsmpl2022@learner.manipal.edu"
+        className="text-blue-600 hover:underline"
+      >
+        riya.mcopsmpl2022@learner.manipal.edu
+      </a>
+    </p>
+  </div>
+);
 
 // export default LetterSection;
 
@@ -162,41 +210,58 @@ const sections = [
   {
     id: 1,
     content: <HomeScreen />,
-    classname: "bg-gray-200 h-auto md:h-screen",
+    classname: "h-auto md:h-screen bg-cover bg-center",
+    style: { backgroundImage: "url('/mahe.jpg')" },
   },
-  { id: 2, content: <LetterSection />, classname: "bg-gray-200 p-4 sm:p-8" },
+  {
+    id: 2,
+    content: <LetterSection />,
+    classname: "rounded-t-[7%] bg-gray-200 p-4 sm:p-8",
+  },
   {
     id: 3,
-    content: <ConferenceHighlights />,
-    classname: "bg-black h-auto md:h-screen p-4 sm:p-8",
+    content: <LetterSectionGenSec />,
+    classname: "rounded-t-[7%] bg-gray-200 p-4 sm:p-8",
   },
   {
     id: 4,
-    content: <MunStats />,
-    classname: "bg-[#f2eaea] h-auto md:h-screen p-4 sm:p-8",
+    content: <ConferenceHighlights />,
+    classname: "rounded-t-[7%] bg-black h-auto md:h-screen p-4 sm:p-8",
   },
   {
     id: 5,
+    content: <MunStats />,
+    classname: "rounded-t-[7%] bg-[#f2eaea] h-auto md:h-screen p-4 sm:p-8",
+  },
+  {
+    id: 6,
     content: <FullImage src="/mun.jpg" />,
+    classname: "rounded-t-[7%] h-auto md:h-screen",
+  },
+  {
+    id: 7,
+    content: <DelegatePage />,
     classname: "h-auto md:h-screen",
   },
-  { id: 6, content: <DelegatePage />, classname: "h-auto md:h-screen" },
 ];
 
 const StackedScroll = () => {
   const { scrollYProgress } = useScroll();
 
   // Motion animations for sections
-  const homeY = useTransform(scrollYProgress, [0, 0.15], ["0vh", "0vh"]);
-  const letterY = useTransform(scrollYProgress, [0.1, 0.3], ["120vh", "0vh"]);
-  const confY = useTransform(scrollYProgress, [0.3, 0.5], ["100vh", "0vh"]);
-  const statsY = useTransform(scrollYProgress, [0.5, 0.7], ["100vh", "25vh"]);
-  const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]);
-  const delegateY = useTransform(scrollYProgress, [0.85, 1], ["100vh", "0vh"]);
+  const homeY = useTransform(scrollYProgress, [0, 0.1], ["0vh", "0vh"]); // Home stays at top initially
+  const letterY = useTransform(scrollYProgress, [0.1, 0.25], ["100vh", "0vh"]); // Letter comes into view
+  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], ["100vh", "0vh"]); // Second letter follows
+  const confY = useTransform(scrollYProgress, [0.4, 0.55], ["100vh", "0vh"]); // Conference highlights
+  const statsY = useTransform(scrollYProgress, [0.55, 0.7], ["100vh", "35vh"]); // Stats section
+  const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]); // Full image
+  const delegateY = useTransform(scrollYProgress, [0.85, 0.95], ["100vh", "0vh"]); // Delegate page
+  const footerOpacity = useTransform(scrollYProgress, [0.95, 1], [0, 1]); // Footer fades in at the end
+  const footerTranslateY = useTransform(scrollYProgress, [0.95, 1], [50, 0]); // Footer moves up
 
   return (
     <div className="min-h-screen max-w-full bg-gradient-to-b from-gray-50 to-white">
-      <ul className="list-none p-0 grid grid-cols-1 gap-10 sm:gap-16 pb-[30vh]">
+      <ul className="list-none p-0 grid grid-cols-1 gap-0 pb-[50vh]">
         {sections.map((section, index) => {
           let translateY;
           switch (index) {
@@ -207,15 +272,18 @@ const StackedScroll = () => {
               translateY = letterY;
               break;
             case 2:
-              translateY = confY;
+              translateY = letterY2;
               break;
             case 3:
-              translateY = statsY;
+              translateY = confY;
               break;
             case 4:
-              translateY = imageY;
+              translateY = statsY;
               break;
             case 5:
+              translateY = imageY;
+              break;
+            case 6:
               translateY = delegateY;
               break;
             default:
@@ -225,11 +293,12 @@ const StackedScroll = () => {
           return (
             <motion.li
               key={section.id}
-              className="sticky top-0 flex justify-center"
+              className="sticky top-0 flex justify-center min-h-screen" // Ensure each section takes full height
               style={{ y: translateY }}
             >
               <div
-                className={`rounded-t-[7%] shadow-xl flex flex-col w-full ${section.classname} text-black`}
+                style={section.style}
+                className={`shadow-xl flex flex-col w-full ${section.classname} text-black`}
               >
                 {section.content}
               </div>
@@ -237,6 +306,12 @@ const StackedScroll = () => {
           );
         })}
       </ul>
+      <motion.div
+        className="fixed bottom-0 w-full"
+        style={{ opacity: footerOpacity, y: footerTranslateY }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 };

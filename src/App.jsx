@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import GalleryPage from "./pages/GalleryPage";
-import Team from "./pages/team";
 import News from "./pages/News";
+import Team from "./pages/team";
+import Loader from "./components/Loader";
 const App = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+  return loading ? (
+    <Loader /> 
+  ) : (
     <Router>
-      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />
