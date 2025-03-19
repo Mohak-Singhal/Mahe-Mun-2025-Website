@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -25,10 +26,18 @@ const Footer = () => {
               <div className="flex flex-col items-center md:items-start">
                 <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-0.5 text-gray-400 font-light">
-                  <li>Home</li>
-                  <li>Team</li>
-                  <li>Gallery</li>
-                  <li>News Letter</li>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/team">Team</Link>
+                  </li>
+                  <li>
+                    <Link to="/gallery">Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/news">News Letter</Link>
+                  </li>
                 </ul>
               </div>
 
@@ -41,11 +50,7 @@ const Footer = () => {
                 </p>
                 <div className="bg-[#1f1f1f] p-4 rounded-lg flex items-center space-x-3 h-12">
                   <div className="text-white">
-                    <img
-                      src="/email.png"
-                      alt="Email Icon"
-                      className="w-7"
-                    />
+                    <img src="/email.png" alt="Email Icon" className="w-7" />
                   </div>
 
                   <input
@@ -54,12 +59,11 @@ const Footer = () => {
                     className="w-full  text-gray-300 placeholder-gray-  px-4 py-2 rounded-md focus:outline-none focus:ring-0 "
                   />
                   <button className="hover:scale-110 transition-all duration-200 ease-in-out">
-                  <img
+                    <img
                       src="/paperplane.png"
                       alt="Email Icon"
                       className="w-7"
                     />
-                  
                   </button>
                 </div>
               </div>

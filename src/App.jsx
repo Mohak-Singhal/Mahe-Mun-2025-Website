@@ -5,6 +5,7 @@ import GalleryPage from "./pages/GalleryPage";
 import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
+import ScrollUp from "./components/ScrollUp";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -19,6 +20,7 @@ const App = () => {
     <Loader /> 
   ) : (
     <Router>
+      <ScrollUp />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />
