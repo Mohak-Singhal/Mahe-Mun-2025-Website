@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './GalleryPage.css';
-import Header from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const imageModules = import.meta.glob('./gallery_images/**/*.{png,jpg,jpeg,svg}', { eager: true });
@@ -102,7 +102,7 @@ const GallerySection = ({ title, images, subsections }) => (
 const GalleryPage = () => {
   return (
     <>
-      <Header />
+      <Navbar classname="text-white bg-black"/>
       <div className="gallery-page">
         {sectionsData.map((section, index) => (
           <GallerySection
