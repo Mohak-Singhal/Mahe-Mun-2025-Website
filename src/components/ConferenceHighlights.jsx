@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Package, Layers, Smile, Command } from "lucide-react";
+
 import { WavyText } from "./textanimation";
 
 
@@ -55,14 +55,14 @@ const ConferenceHighlights = () => {
       
       <WavyText
         text="CONFERENCE HIGHLIGHTS"
-        className="text-[50px] text-left font-semibold leading-[1.1]"
+        className="text-[50px] text-white text-left font-semibold leading-[1.1]"
       />
 
 
       {/* Day Highlights */}
       {highlights.map((dayHighlight) => (
         <div key={dayHighlight.day} className="max-w-6xl w-full mt-10">
-          <h2 className="text-4xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
+          <h2 className="text-5xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dayHighlight.events.map((event) => (
