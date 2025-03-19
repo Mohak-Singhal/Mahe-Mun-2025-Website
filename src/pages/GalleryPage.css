@@ -1,23 +1,35 @@
-/*Overall*/
+/* Overall */
 :root {
-    --background-dark: #121212;         
-    --card-bg: rgba(30, 30, 30, 0.95);     
-    --text-light: #e0e0e0;                
-    --accent-color: #ff4081;              
+    --background: #ffffff;
+    --card-bg: #f8f8f8;
+    --text-dark: #121212;
+    --accent-color: #ff4081;
     --border-radius: 12px;
     --transition-speed: 0.35s;
-    --shadow-dark: rgba(0, 0, 0, 0.7);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
 }
 
-.gallery-page {
-    background: linear-gradient(135deg, #1f1f1f, #121212);
-    color: var(--text-light);
-    min-height: 100vh;
-    padding: 60px 150px;
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* gallery specific */
+.gallery-page {
+    background: var(--background);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 60px 150px;
+}
+
+@media (max-width: 600px) {
+    .gallery-page {
+      padding: 60px 20px;
+    }
+}
+
+/* Gallery Specific */
 .gallery-section {
     margin-bottom: 60px;
     padding: 20px;
@@ -27,7 +39,7 @@
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 30px;
-    color: var(--text-light);
+    color: var(--text-dark);
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -50,11 +62,11 @@
     font-size: 1.8rem;
     text-align: center;
     margin: 20px 0;
-    color: var(--text-light);
+    color: var(--text-dark);
     text-transform: uppercase;
-  }
+}
 
-/* masonry layout */
+/* Masonry Layout */
 .gallery-grid {
     column-count: 1;
     column-gap: 30px;
@@ -72,18 +84,12 @@
     }
 }
 
-@media (max-width: 600px) {
-    .gallery-page {
-      padding: 60px 20px;
-    }
-  }
-
 /* Card */
 .gallery-card {
-    display: inline-block;            
+    display: inline-block;
     width: 100%;
-    margin-bottom: 30px;            
-    break-inside: avoid;              
+    margin-bottom: 30px;
+    break-inside: avoid;
     background: var(--card-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -103,7 +109,7 @@
 /* Card Image */
 .gallery-image {
     width: 100%;
-    height: auto;  
+    height: auto;
     display: block;
     transition: transform var(--transition-speed) ease;
 }
@@ -112,7 +118,7 @@
     transform: scale(1.05);
 }
 
-/* hover overlay */
+/* Hover Overlay */
 .gallery-card::before {
     content: "";
     position: absolute;
@@ -120,7 +126,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(0,0,0,0.1) 100%);
     opacity: 0;
     transition: opacity var(--transition-speed) ease;
     pointer-events: none;
@@ -131,23 +137,23 @@
     opacity: 1;
 }
 
+/* Show More Button */
 .show-more-container {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .show-more-button {
+}
+
+.show-more-button {
     padding: 10px 20px;
     font-size: 1rem;
     background: var(--accent-color);
-    color: var(--text-light);
+    color: var(--background);
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background var(--transition-speed) ease;
-  }
-  
-  .show-more-button:hover {
-    background: darken(var(--accent-color), 10%);
-  }
-  
+}
+
+.show-more-button:hover {
+    background: #e04070;
+}
