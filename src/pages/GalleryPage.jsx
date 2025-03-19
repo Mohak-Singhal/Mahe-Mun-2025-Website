@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './GalleryPage.css';
+import Header from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const imageModules = import.meta.glob('./gallery_images/**/*.{png,jpg,jpeg,svg}', { eager: true });
 const allImages = {};
@@ -47,31 +49,18 @@ const sectionsData = [
   },
 ];
 
-const GallerySection = ({ title, images, subsections }) => (
-  <section className="gallery-section">
-    <h2 className="gallery-section-title">{title}</h2>
-    {subsections ? (
-      subsections.map((sub, index) => (
-        <div key={index}>
-          <h3 className="gallery-subsection-title">{sub.title}</h3>
-          <div className="gallery-grid">
-            {sub.images.map((image, idx) => (
-              <div key={idx} className="gallery-card">
-                <img
-                  src={allImages[image.fileName]}
-                  alt={image.alt}
-                  className="gallery-image"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))
-    ) : (
+const GalleryGrid = ({ images }) => {
+  const [visibleCount, setVisibleCount] = useState(6); // initially show 6 images
+  const visibleImages = images.slice(0, visibleCount);
+  
+  const handleShowMore = () => {
+    setVisibleCount(images.length);
+  };
+  
+  return (
+    <div>
       <div className="gallery-grid">
-        {images.map((image, index) => (
+        {visibleImages.map((image, index) => (
           <div key={index} className="gallery-card">
             <img
               src={allImages[image.fileName]}
@@ -83,22 +72,49 @@ const GallerySection = ({ title, images, subsections }) => (
           </div>
         ))}
       </div>
+      {visibleCount < images.length && (
+        <div className="show-more-container">
+          <button className="show-more-button" onClick={handleShowMore}>
+            Show More
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const GallerySection = ({ title, images, subsections }) => (
+  <section className="gallery-section">
+    <h2 className="gallery-section-title">{title}</h2>
+    {subsections ? (
+      subsections.map((sub, index) => (
+        <div key={index}>
+          <h3 className="gallery-subsection-title">{sub.title}</h3>
+          <GalleryGrid images={sub.images} />
+        </div>
+      ))
+    ) : (
+      <GalleryGrid images={images} />
     )}
   </section>
 );
 
 const GalleryPage = () => {
   return (
-    <div className="gallery-page">
-      {sectionsData.map((section, index) => (
-        <GallerySection
-          key={index}
-          title={section.title}
-          images={section.images}
-          subsections={section.subsections}
-        />
-      ))}
-    </div>
+    <>
+      <Header />
+      <div className="gallery-page">
+        {sectionsData.map((section, index) => (
+          <GallerySection
+            key={index}
+            title={section.title}
+            images={section.images}
+            subsections={section.subsections}
+          />
+        ))}
+      </div>
+      <Footer />
+    </>
   );
 };
 

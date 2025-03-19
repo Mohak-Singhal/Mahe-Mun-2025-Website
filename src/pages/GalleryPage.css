@@ -130,3 +130,24 @@
 .gallery-card:hover::before {
     opacity: 1;
 }
+
+.show-more-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .show-more-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed) ease;
+  }
+  
+  .show-more-button:hover {
+    background: darken(var(--accent-color), 10%);
+  }
+  
