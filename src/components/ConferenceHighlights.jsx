@@ -55,7 +55,7 @@ const ConferenceHighlights = () => {
       
       <WavyText
         text="CONFERENCE HIGHLIGHTS"
-        className="text-[50px] text-left font-semibold leading-[1.1]"
+        className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1]"
       />
 
 

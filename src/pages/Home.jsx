@@ -12,7 +12,7 @@ import { WavyText } from "../components/textanimation";
 const LetterSectionGenSec = () => (
   <div className=" px-6 md:px-12  w-full max-w-6xl mx-auto">
     {/* Title */}
-    <WavyText className="mt-8 text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
+    <WavyText className="mt-8 text-xl sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
     text="Letter from the Secretary-General"
     />
 
@@ -94,9 +94,9 @@ const LetterSectionGenSec = () => (
 );
 
 const LetterSection = () => (
-  <div className="px-6 md:px-12  w-full max-w-6xl mx-auto">
+  <div className="px-6 md:px-12   w-full max-w-6xl mx-auto">
     {/* Title */}
-    <WavyText className="mt-8 text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
+    <WavyText className="mt-8 text-[22px]  sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
     text="Letter from the President"
     />
 
