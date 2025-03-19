@@ -49,20 +49,21 @@ const highlights = [
 
 const ConferenceHighlights = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col items-center py-16 px-6">
+    <div className="bg-black text-white min-h-screen flex flex-col items-center py-4 px-6">
 
 
       
-      <WavyText
+      {/* <WavyText
         text="CONFERENCE HIGHLIGHTS"
 
-        className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1]"
-      />
+        className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white"
+      /> */}
+      <div className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white">CONFERENCE HIGHLIGHTS</div>
 
 
       {/* Day Highlights */}
       {highlights.map((dayHighlight) => (
-        <div key={dayHighlight.day} className="max-w-6xl w-full mt-10">
+        <div key={dayHighlight.day} className="max-w-6xl w-full">
           <h2 className="text-5xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -91,7 +91,7 @@ const Team = () => {
                     </div>
 
             {}
-            <h2>The Secretariat</h2>
+            <h2>Board of Directors</h2>
             <div className="first-row">
                 {teamMembers.slice(0, 2).map((member, index) => (
                     <div 
@@ -113,7 +113,6 @@ const Team = () => {
             </div>
 
             {}
-            <h2>Board of Directors</h2>
             <div className="grid-container">
                 {teamMembers.slice(2).map((member, index) => (
                     <div 
