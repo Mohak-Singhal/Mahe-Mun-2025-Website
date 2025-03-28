@@ -1,0 +1,159 @@
+/* Overall */
+:root {
+    --background: #ffffff;
+    --card-bg: #f8f8f8;
+    --text-dark: #121212;
+    --accent-color: #ff4081;
+    --border-radius: 12px;
+    --transition-speed: 0.35s;
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.gallery-page {
+    background: var(--background);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 60px 150px;
+}
+
+@media (max-width: 600px) {
+    .gallery-page {
+      padding: 60px 20px;
+    }
+}
+
+/* Gallery Specific */
+.gallery-section {
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.gallery-section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.gallery-section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.gallery-subsection-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--text-dark);
+    text-transform: uppercase;
+}
+
+/* Masonry Layout */
+.gallery-grid {
+    column-count: 1;
+    column-gap: 30px;
+}
+
+@media (min-width: 600px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+/* Card */
+.gallery-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    break-inside: avoid;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 20px var(--shadow-dark);
+    transition: transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    cursor: pointer;
+    transform: none;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px var(--shadow-dark);
+}
+
+/* Card Image */
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-speed) ease;
+}
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* Hover Overlay */
+.gallery-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(0,0,0,0.1) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.gallery-card:hover::before {
+    opacity: 1;
+}
+
+/* Show More Button */
+.show-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-more-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--accent-color);
+    color: var(--background);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed) ease;
+}
+
+.show-more-button:hover {
+    background: #e04070;
+}

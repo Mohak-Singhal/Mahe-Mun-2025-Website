@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { WavyText } from "./textanimation";
+
 
 const stats = [
   { targetNumber: 250, label: "Delegates" },
   { targetNumber: 25, label: "Executive Board Members" },
   { targetNumber: 50, label: "Organizers" },
   { targetNumber: 40, label: "Volunteers" },
+
 ];
 
 const MunStats = () => {
@@ -13,11 +16,12 @@ const MunStats = () => {
   const isInView = useInView(statsRef, { once: true, margin: "-100px" });
 
   return (
+
     <div className="w-full bg-[#f2eaea] py-10 px-4 sm:px-8 lg:px-16">
       {/* Section Heading */}
-      <h2 className="text-center text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold text-black leading-tight">
-        Our Diverse Participants
-      </h2>
+      <WavyText className="text-center text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold text-black leading-tight"
+        text="Our Diverse Participants"
+      />
 
       {/* Animated Stats Grid */}
       <motion.div
@@ -38,14 +42,17 @@ const MunStats = () => {
 };
 
 const StatBox = ({ targetNumber, label, isInView }) => {
+
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (isInView) {
       let start = 0;
+
       const duration = 1500;
       const interval = 30;
       const increment = targetNumber / (duration / interval);
+
 
       const counter = setInterval(() => {
         start += increment;
@@ -68,6 +75,7 @@ const StatBox = ({ targetNumber, label, isInView }) => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
+
       {/* Animated Number */}
       <h3 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] text-black font-medium">
         {count}+
@@ -78,6 +86,7 @@ const StatBox = ({ targetNumber, label, isInView }) => {
       <p className="text-gray-700 mt-3 sm:mt-4 text-[1.2rem] sm:text-[1.5rem] lg:text-[1.8rem] font-light tracking-tight">
         {label}
       </p>
+
     </motion.div>
   );
 };
