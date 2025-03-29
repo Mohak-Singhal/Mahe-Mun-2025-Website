@@ -32,7 +32,7 @@ const App = () => {
           loadedImages++;
           resolve();
         };
-        img.onerror = resolve; \
+        img.onerror = resolve; 
       });
     };
 
