@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
+import AboutUs from "./pages/AboutUs";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
       </Routes>
     </Router>

@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10">
+    
+    <footer  id="footer" className="bg-black text-white py-10">
       <div className="container mx-auto px-10">
         {/* Upper Division */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
