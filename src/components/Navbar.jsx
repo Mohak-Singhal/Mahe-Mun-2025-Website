@@ -13,6 +13,7 @@ const Navbar = ({classname}) => {
     { name: "GALLERY", path: "/gallery" },
     { name: "ABOUT US", path: "/about" },
     { name: "CONTACT US", path: "/contact" },
+    { name: "AUGUST CONFERENCE", path: "/august-conference" },
 
   ];
 

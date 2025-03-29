@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
+import AugustConference from "./pages/AugustConference";
 import LoadingScreen from "./components/Loader2";
 
 const images = [
@@ -15,12 +16,13 @@ const images = [
   "/mun2.jpg",
   "/mun3.jpg",
 ];
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let loadedImages = 0;
-    const startTime = Date.now(); // Track when loading starts
+    const startTime = Date.now(); 
 
     const loadImage = (src) => {
       return new Promise((resolve) => {
@@ -30,13 +32,13 @@ const App = () => {
           loadedImages++;
           resolve();
         };
-        img.onerror = resolve; // Resolve even if the image fails to load
+        img.onerror = resolve; \
       });
     };
 
     Promise.all(images.map((src) => loadImage(src))).then(() => {
       const elapsedTime = Date.now() - startTime;
-      const remainingTime = Math.max(0, 3000 - elapsedTime); // Ensure at least 3 sec
+      const remainingTime = Math.max(0, 3000 - elapsedTime); 
 
       setTimeout(() => {
         setLoading(false);
@@ -52,6 +54,7 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/news" element={<News />} />
+        <Route path="/august-conference" element={<AugustConference />} />
       </Routes>
     </Router>
   );

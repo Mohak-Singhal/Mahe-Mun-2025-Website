@@ -1,0 +1,301 @@
+:root {
+  --bg-cream: #F7EBDB;          
+  --text-color: #333333;         
+  --accent-gold: #BFA06B;         
+  --accent-gold-dark: #A78B5A;      
+  --border-gray: #CCCCCC;         
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --flip-front-start: #FFE4C4;  
+  --flip-front-end:   #FFDAB9;  
+  --flip-back-start:  #FFDAB9;  
+  --flip-back-end:    #FFC299;    
+
+}
+
+/* Overall Page */
+.aug-conference-page {
+  background: var(--bg-cream);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 40px 80px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .aug-conference-page {
+    padding: 40px 20px;
+  }
+}
+
+/* conference details*/
+.conference-details {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #EEE4D5, var(--bg-cream));
+  border: 3px dashed var(--accent-gold);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(72, 21, 126, 0.3);
+  overflow: hidden;
+}
+
+.conference-details::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, var(--accent-gold), var(--accent-gold-dark), var(--accent-gold));
+  animation: spin 10s linear infinite;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.conference-details * {
+  position: relative;
+  z-index: 1;
+}
+
+.conference-details h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.conference-details p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.more-details {
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* search */
+.search-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid var(--border-gray);
+  border-radius: 25px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-gold);
+}
+
+/* committees */
+.committees-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--border-gray);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.tier-section {
+  margin-bottom: 60px;
+  transition: opacity 0.3s ease;
+}
+
+.tier-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.commencees-grid,
+.committees-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .committees-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* flip card */
+.committee-card {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 250px; 
+  transition: transform 0.3s ease;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.committee-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* front and back faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid var(--border-gray);
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* front face */
+.flip-card-front {
+  background: linear-gradient(135deg, var(--flip-front-start), var(--flip-front-end));
+  display: flex;
+  align-items: center;
+}
+
+.committee-front-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.committee-logo-container {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.committee-logo {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.committee-text-container {
+  flex: 1;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.committee-name {
+  font-size: 1.8rem;
+  margin: 0 0 5px 0;
+  color: var(--text-color);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.committee-fullform {
+  font-size: 1.1rem;
+  color: #5D4037;
+  font-style: italic;
+  margin: 0;
+}
+
+.committee-subinfo {
+  font-size: 0.9rem;
+  color: #5D4037;  
+  font-style: italic;
+  margin: 0;
+  margin-top: 4px;
+}
+
+/* back face */
+.flip-card-back {
+  background: linear-gradient(135deg, var(--flip-back-start), var(--flip-back-end));
+  transform: rotateY(180deg);
+  padding-top: 20px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  overflow-y: auto;
+}
+
+.flip-card-back p {
+  margin: 8px 0;
+}
+
+.committee-eb {
+  margin-top: 10px;
+}
+
+.committee-eb-member {
+  margin-top: 5px;
+}
+
+/* background guide button */
+.background-guide-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--accent-gold);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.background-guide-btn:hover {
+  background-color: var(--accent-gold-dark);
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: var(--accent-gold);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--accent-gold-dark);
+}
