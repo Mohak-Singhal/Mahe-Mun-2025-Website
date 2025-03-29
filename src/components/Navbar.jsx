@@ -18,11 +18,11 @@ const Navbar = ({classname}) => {
 
   return (
     <nav className={`${classname}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-3 ">
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src="/logo2.png" alt="Logo" className="h-20" />
+            <img src="/logo2.png" alt="Logo" className="h-20 sm:h-26" />
           </Link>
         </div>
 

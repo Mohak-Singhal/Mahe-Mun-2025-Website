@@ -59,9 +59,11 @@ const HomeScreen = () => {
   }, []);
 
   return (
+    <>
     <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
+      <Navbar classname="text-white"/>
       {/* Background Image Carousel */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 -z-1">
         <div
           className="w-full h-full transition-transform duration-1000"
           style={{
@@ -119,18 +121,14 @@ const HomeScreen = () => {
         </div>
       </div>
 
-      {/* Logo Image */}
-      <img 
-        src="/logo.jpg" 
-        alt="Logo" 
-        className="absolute bottom-6 left-6 h-24 sm:h-32 md:h-40 lg:h-48"
-      />
+      
 
       {/* Subtitle */}
       <p className="text-lg sm:text-xl md:text-2xl text-center sm:text-right mt-4 sm:mt-8">
         Welcome to the MAHE version of the Model United Nations.
       </p>
     </div>
+    </>
   );
 };
 

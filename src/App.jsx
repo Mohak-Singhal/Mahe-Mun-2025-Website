@@ -6,19 +6,45 @@ import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
+import LoadingScreen from "./components/Loader2";
+
+const images = [
+  "/mahe.jpg",
+  "/mun0.jpg",
+  "/mun1.jpg",
+  "/mun2.jpg",
+  "/mun3.jpg",
+];
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500);
+    let loadedImages = 0;
+    const startTime = Date.now(); // Track when loading starts
 
-    return () => clearTimeout(timer);
+    const loadImage = (src) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          loadedImages++;
+          resolve();
+        };
+        img.onerror = resolve; // Resolve even if the image fails to load
+      });
+    };
+
+    Promise.all(images.map((src) => loadImage(src))).then(() => {
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, 3000 - elapsedTime); // Ensure at least 3 sec
+
+      setTimeout(() => {
+        setLoading(false);
+      }, remainingTime);
+    });
   }, []);
-  return loading ? (
-    <Loader /> 
-  ) : (
+
+  return loading ? <LoadingScreen /> : (
     <Router>
       <ScrollUp />
       <Routes>
