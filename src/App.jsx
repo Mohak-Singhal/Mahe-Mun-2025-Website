@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
+import AugustConference from "./pages/AugustConference";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/news" element={<News />} />
+        <Route path="/august-conference" element={<AugustConference />} />
       </Routes>
     </Router>
   );
