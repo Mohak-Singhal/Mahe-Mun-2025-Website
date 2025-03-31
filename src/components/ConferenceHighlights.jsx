@@ -71,7 +71,7 @@ const ConferenceHighlights = () => {
               {dayHighlight.events.map((event) => (
                 <div
                   key={event.id}
-                  className="bg-[#141414] p-6 rounded-xl flex flex-col items-start"
+                  className="bg-[#141414] opacity-85 p-6 rounded-xl flex flex-col items-start"
                 >
                   {/* Number in square */}
                   <div className="flex items-center justify-center bg-gray-800 text-white rounded-md w-10 h-10 mb-4">

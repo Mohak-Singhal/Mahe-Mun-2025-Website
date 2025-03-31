@@ -11,8 +11,9 @@ const LetterSectionGenSec = () => (
   <div className="relative min-h-screen">
     {/* Background Image */}
     <div
-      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover  opacity-25"
+      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover  opacity-80"
     ></div>
+    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
 
     {/* Main Content */}
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
@@ -23,7 +24,7 @@ const LetterSectionGenSec = () => (
       />
 
       {/* Letter Content */}
-      <p className="mt-6 text-gray-700 text-sm text-justify">
+      <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Dearest Delegates,</strong>
         <br />
         <br />
@@ -105,9 +106,9 @@ const LetterSection = () => (
   <div className="relative min-h-screen">
     {/* Background Image */}
     <div
-      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover bg-center opacity-25"
+      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover bg-center opacity-80"
     ></div>
-
+    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
     {/* Main Content */}
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
       {/* Title */}
@@ -117,7 +118,7 @@ const LetterSection = () => (
       />
 
       {/* Letter Content */}
-      <p className="mt-6 text-gray-700 text-sm text-justify">
+      <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Esteemed Delegates,</strong>
         <br />
         <br />
