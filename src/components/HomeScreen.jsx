@@ -59,9 +59,11 @@ const HomeScreen = () => {
   }, []);
 
   return (
+    <>
     <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
+      <Navbar classname="text-white"/>
       {/* Background Image Carousel */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 -z-1">
         <div
           className="w-full h-full transition-transform duration-1000"
           style={{
@@ -75,8 +77,8 @@ const HomeScreen = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex w-full h-full items-center justify-center text-white px-6">
-        <div className="flex flex-col items-center text-center space-y-6">
+      <div className="relative z-10 flex w-full h-full items-start justify-center text-white px-6">
+        <div className="flex flex-col items-center text-center space-y-6 mt-8 md:mt-4">
           {/* Animated Title */}
           <h1
             ref={titleRef}
@@ -113,24 +115,20 @@ const HomeScreen = () => {
             <img
               src="/logo2.png"
               alt="MAHE MUN Logo"
-              className="h-20 sm:h-28 md:h-36 lg:h-48 transition-transform duration-500 hover:scale-105 drop-shadow-md"
+              className="h-40 md:h-36 lg:h-48 transition-transform duration-500 hover:scale-105 drop-shadow-md"
             />
           </div>
         </div>
       </div>
 
-      {/* Logo Image */}
-      <img 
-        src="/logo.jpg" 
-        alt="Logo" 
-        className="absolute bottom-6 left-6 h-24 sm:h-32 md:h-40 lg:h-48"
-      />
+      
 
       {/* Subtitle */}
       <p className="text-lg sm:text-xl md:text-2xl text-center sm:text-right mt-4 sm:mt-8">
         Welcome to the MAHE version of the Model United Nations.
       </p>
     </div>
+    </>
   );
 };
 

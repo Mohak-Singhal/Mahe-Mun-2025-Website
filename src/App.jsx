@@ -7,19 +7,47 @@ import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
 import AboutUs from "./pages/AboutUs";
+import AugustConference from "./pages/AugustConference";
+import LoadingScreen from "./components/Loader2";
+
+const images = [
+  "/mahe.jpg",
+  "/mun0.jpg",
+  "/mun1.jpg",
+  "/mun2.jpg",
+  "/mun3.jpg",
+];
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500);
+    let loadedImages = 0;
+    const startTime = Date.now(); 
 
-    return () => clearTimeout(timer);
+    const loadImage = (src) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          loadedImages++;
+          resolve();
+        };
+        img.onerror = resolve; 
+      });
+    };
+
+    Promise.all(images.map((src) => loadImage(src))).then(() => {
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, 3000 - elapsedTime); 
+
+      setTimeout(() => {
+        setLoading(false);
+      }, remainingTime);
+    });
   }, []);
-  return loading ? (
-    <Loader /> 
-  ) : (
+
+  return loading ? <LoadingScreen /> : (
     <Router>
       <ScrollUp />
       <Routes>
@@ -28,6 +56,7 @@ const App = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
+        <Route path="/august-conference" element={<AugustConference />} />
       </Routes>
     </Router>
   );
