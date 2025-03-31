@@ -77,7 +77,7 @@ const HomeScreen = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex w-full h-full items-center justify-center text-white px-6">
+      <div className="relative z-10 flex w-full h-full items-start justify-center text-white px-6">
         <div className="flex flex-col items-center text-center space-y-6">
           {/* Animated Title */}
           <h1
