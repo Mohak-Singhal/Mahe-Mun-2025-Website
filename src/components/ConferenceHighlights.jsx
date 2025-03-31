@@ -52,8 +52,8 @@ const ConferenceHighlights = () => {
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover bg-center opacity-60"
-        // Replace '/path/to/your-image.jpg' with the correct path to your image.
+        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover bg-fixed bg-center opacity-60"
+        
       ></div>
 
       {/* Main Content */}

@@ -11,9 +11,9 @@ const LetterSectionGenSec = () => (
   <div className="relative min-h-screen">
     {/* Background Image */}
     <div
-      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover  opacity-80"
+      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover  opacity-80 rounded-xl"
     ></div>
-    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
+    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg "></div>
 
     {/* Main Content */}
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
@@ -106,7 +106,7 @@ const LetterSection = () => (
   <div className="relative min-h-screen">
     {/* Background Image */}
     <div
-      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover bg-center opacity-80"
+      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover bg-center  opacity-80"
     ></div>
     <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
     {/* Main Content */}
@@ -220,17 +220,17 @@ const sections = [
   {
     id: 2,
     content: <LetterSection />,
-    classname: "rounded-t-[7%] bg-gray-200 p-4 sm:p-8",
+    classname: "rounded-t-[7%] bg-gray-200 ",
   },
   {
     id: 3,
     content: <LetterSectionGenSec />,
-    classname: "rounded-t-[7%] bg-gray-200 p-4 sm:p-8",
+    classname: "rounded-t-[7%]  ",
   },
   {
     id: 4,
     content: <ConferenceHighlights />,
-    classname: "rounded-t-[7%] bg-black h-auto md:h-screen p-4 sm:p-8",
+    classname: "rounded-t-[7%] bg-black h-auto md:h-screen   ",
   },
   {
     id: 5,
