@@ -1,18 +1,18 @@
-
+/* Global Styles */
 body {
     font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
     background-color: #f2eded;
     margin: 0;
-    padding: 0px;
+    padding: 0;
 }
-
 
 .header-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
@@ -25,23 +25,22 @@ body {
     margin-left: 70px;
 }
 
-
 .description {
     max-width: 400px;
     font-size: 14px;
     color: #555;
-    text-align: right;
+    text-align: center;
+    margin-top: 15px;
 }
 
-
 .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 1100px;
     margin: 20px auto;
 }
-
 
 .team-member {
     overflow: hidden;
@@ -49,10 +48,10 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     width: 100%;
+    max-width: 250px; /* Set a max-width to keep images from becoming too large */
     background: white;
     text-align: center;
 }
-
 
 .image-container {
     width: 100%;
@@ -67,11 +66,9 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-
 .team-member:hover .image-container img {
     transform: scale(1.1);
 }
-
 
 .linkedin-icon {
     position: absolute;
@@ -109,88 +106,11 @@ body {
     margin: 5px 0;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .heading {
-        font-size: 28px; 
-        margin: 0 auto; 
-        text-align: center;
-    }
-
-    .description {
-        max-width: 90%; 
-        font-size: 14px;
-        text-align: center;
-        margin: 10px auto; 
-    }
-
-    .team-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-    }
-
-    .image-container img {
-        height: 250px;
-    }
-}
-h2{
-    margin-top: 70px;
-    text-align: center;
-    font-size: 25px;
-}
-.team-member {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.team-member.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-.first-row {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 80px;
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 60px;
-}
-
-.image-container img {
-    width: 100%;
-    height: 250px; 
-    object-fit: cover;
-}
-
-.first-row .team-member {
-    width: 270px; 
-    height: 320px; }
-
-
-.grid-container .team-member {
-    width: 250px;
-    height: 340px;
-    margin-bottom: 60px;
-}
+/* Stats Section Styles */
 .stats-container {
     display: flex;
     justify-content: center;
-    gap:150px;
+    gap: 150px;
     margin-top: 16px;
 }
 
@@ -216,5 +136,92 @@ h2{
     color: #807f7f;
 }
 
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px;
+    }
 
+    .heading {
+        font-size: 35px; /* Increased font size for mobile */
+        margin: 0;
+        text-align: center; /* Center the heading */
+    }
+
+    .description {
+        max-width: 90%;
+        font-size: 14px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    /* Team member flexbox layout for mobile view */
+    .team-container {
+        flex-direction: column; /* Stack team members vertically */
+        align-items: center; /* Center them horizontally */
+        gap: 60px; /* Increased gap between images */
+    }
+
+    /* Team member block styles */
+    .team-member {
+        width: 90% !important; /* Full width in mobile view */
+        max-width: none; /* Remove max-width for mobile view */
+        margin-bottom: 70px; /* Space between team members */
+    }
+
+    .image-container img {
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px;
+    }
+
+    /* Stats Section */
+    .stats-container {
+        flex-direction: row;
+        gap: 2px;
+     }
+
+    .stat {
+        text-align: center;
+
+    }
+
+    .stat h2 {
+        font-size: 20px;
+    }
+    .board_heading{
+        margin-top: 60px;
+        text-align: center;
+        font-size: 23px;
+        color: #443838;
+        font-weight: 600;
+        margin-bottom: 60px;
+    }
+    .underline {
+        width: 50px;
+        height: 2px;
+        background-color: rgb(140, 139, 139);
+        margin: 5px auto;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-member {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
