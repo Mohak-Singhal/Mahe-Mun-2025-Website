@@ -38,6 +38,9 @@ const Footer = () => {
                   <li>
                     <Link to="/news">News Letter</Link>
                   </li>
+                  <li>
+                    <Link to="/august-conference">August Conference</Link>
+                  </li>
                 </ul>
               </div>
 

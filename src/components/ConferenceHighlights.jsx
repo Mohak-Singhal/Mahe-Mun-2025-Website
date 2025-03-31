@@ -49,48 +49,45 @@ const highlights = [
 
 const ConferenceHighlights = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col items-center py-4 px-6">
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover bg-center opacity-60"
+        // Replace '/path/to/your-image.jpg' with the correct path to your image.
+      ></div>
 
-
-      
-      {/* <WavyText
-        text="CONFERENCE HIGHLIGHTS"
-
-        className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white"
-      /> */}
-      <div className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white">CONFERENCE HIGHLIGHTS</div>
-
-
-      {/* Day Highlights */}
-      {highlights.map((dayHighlight) => (
-        <div key={dayHighlight.day} className="max-w-6xl w-full">
-          <h2 className="text-5xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {dayHighlight.events.map((event) => (
-              <div key={event.id} className="bg-[#141414] p-6 rounded-xl flex flex-col items-start">
-                {/* Number in square */}
-                <div className="flex items-center justify-center bg-gray-800 text-white rounded-md w-10 h-10 mb-4">
-                  {event.id}
-                </div>
-
-                {/* Title and description */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold">{event.title}</h3>
-                </div>
-                <p className="text-gray-400">{event.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* Main Content */}
+      <div className="relative z-10 bg-black/50 text-white flex flex-col items-center py-4 px-6">
+        {/* Header */}
+        <div className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white">
+          CONFERENCE HIGHLIGHTS
         </div>
-      ))}
 
-      {/* Bottom Button
-      <div className="mt-12">
-        <button className="bg-[#141414] text-white text-sm px-6 py-3 rounded-full font-semibold border border-gray-500 hover:scale-105 transition">
-          Save your precious time for finding a solution. <br /> Contact us now
-        </button>
-      </div> */}
+        {/* Day Highlights */}
+        {highlights.map((dayHighlight) => (
+          <div key={dayHighlight.day} className="max-w-6xl w-full">
+            <h2 className="text-5xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {dayHighlight.events.map((event) => (
+                <div
+                  key={event.id}
+                  className="bg-[#141414] opacity-85 p-6 rounded-xl flex flex-col items-start"
+                >
+                  {/* Number in square */}
+                  <div className="flex items-center justify-center bg-gray-800 text-white rounded-md w-10 h-10 mb-4">
+                    {event.id}
+                  </div>
+                  {/* Title and description */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-semibold">{event.title}</h3>
+                  </div>
+                  <p className="text-gray-400">{event.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
