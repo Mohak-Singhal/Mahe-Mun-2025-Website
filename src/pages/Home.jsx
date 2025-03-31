@@ -283,7 +283,7 @@ const Home = () => {
             >
               <div
                 style={section.style}
-                className={`shadow-xl flex flex-col w-full ${section.classname} text-black`}
+                className={`shadow-xl flex flex-col w-full ${section.classname} text-black overflow-y-auto  scrollbar-hide`}
               >
                 {section.content}
               </div>
