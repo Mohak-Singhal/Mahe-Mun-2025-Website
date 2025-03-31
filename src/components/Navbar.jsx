@@ -1,25 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Icon package for mobile menu
+import { Menu, X } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 
-const Navbar = ({classname}) => {
+const Navbar = ({ classname }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
-  // Navigation items stored as an array of objects
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Navigation links
   const navLinks = [
-    
     { name: "TEAM", path: "/team" },
     { name: "NEWS", path: "/news" },
     { name: "GALLERY", path: "/gallery" },
-    { name: "ABOUT US", path: "/about" },
-    { name: "CONTACT US", path: "/contact" },
+    { name: "ABOUT US", path: "/about-us" },
+    { name: "CONTACT US", path: "footer" }, // Scrolls to footer
     { name: "AUGUST CONFERENCE", path: "/august-conference" },
-
   ];
 
   return (
-    <nav className={`${classname}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-3 ">
+    <nav
+      className={`${classname} fixed top-0 left-0 w-full z-50 transition-all duration-300 `}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
         {/* Logo */}
         <div>
           <Link to="/">
@@ -28,12 +39,23 @@ const Navbar = ({classname}) => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8 text-lg font-medium ">
+        <ul className="hidden md:flex space-x-8 text-lg font-medium">
           {navLinks.map((link, index) => (
             <li key={index}>
-              <Link to={link.path} className="hover:text-gray-300">
-                {link.name}
-              </Link>
+              {link.name === "CONTACT US" ? (
+                <ScrollLink
+                  to="footer"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer hover:text-gray-400 transition"
+                >
+                  {link.name}
+                </ScrollLink>
+              ) : (
+                <Link to={link.path} className="hover:text-gray-400 transition">
+                  {link.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -48,27 +70,36 @@ const Navbar = ({classname}) => {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#1a1d23] px-6 py-4">
-          <ul className="flex flex-col space-y-4">
+        <div className="md:hidden bg-black px-6 py-4">
+          <ul className="flex flex-col space-y-4 text-white">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <Link
-                  to={link.path}
-                  className="block py-2 text-lg font-medium hover:text-gray-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
+                {link.name === "CONTACT US" ? (
+                  <ScrollLink
+                    to="footer"
+                    smooth={true}
+                    duration={500}
+                    className="block py-2 text-lg font-medium hover:text-gray-400"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </ScrollLink>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="block py-2 text-lg font-medium hover:text-gray-400"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

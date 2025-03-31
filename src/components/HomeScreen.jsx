@@ -77,8 +77,8 @@ const HomeScreen = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex w-full h-full items-start justify-center text-white px-6">
-        <div className="flex flex-col items-center text-center space-y-6">
+      <div className="relative z-10 flex w-full h-full mt-[60%] sm:mt-[11%] justify-center text-white px-6">
+        <div className="flex flex-col items-center text-center space-y-6 mt-8 md:mt-4">
           {/* Animated Title */}
           <h1
             ref={titleRef}
@@ -115,7 +115,7 @@ const HomeScreen = () => {
             <img
               src="/logo2.png"
               alt="MAHE MUN Logo"
-              className="h-20 sm:h-28 md:h-36 lg:h-48 transition-transform duration-500 hover:scale-105 drop-shadow-md"
+              className="h-40 md:h-36 lg:h-48 transition-transform duration-500 hover:scale-105 drop-shadow-md"
             />
           </div>
         </div>
