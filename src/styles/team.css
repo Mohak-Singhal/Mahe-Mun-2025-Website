@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
@@ -10,9 +9,8 @@ body {
 
 .header-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
@@ -23,14 +21,20 @@ body {
     font-weight: 300;
     color: #393838;
     margin-left: 70px;
+    text-align: center;
 }
 
 .description {
     max-width: 400px;
     font-size: 14px;
     color: #555;
+    text-align: right;
+}
+
+h2 {
     text-align: center;
-    margin-top: 15px;
+    font-size: 22px;
+    margin-top: 70px;
 }
 
 .team-container {
@@ -43,19 +47,21 @@ body {
 }
 
 .team-member {
+    flex: 1 1 250px;
+    max-width: 300px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    width: 100%;
-    max-width: 250px; /* Set a max-width to keep images from becoming too large */
     background: white;
     text-align: center;
+    position: relative;
 }
 
 .image-container {
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -63,11 +69,11 @@ body {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .team-member:hover .image-container img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .linkedin-icon {
@@ -106,7 +112,41 @@ body {
     margin: 5px 0;
 }
 
-/* Stats Section Styles */
+.first-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.first-row .team-member {
+    width: 270px;
+    height: 320px;
+}
+
+.grid-container .team-member {
+    width: 250px;
+    height: 340px;
+    margin-bottom: 60px;
+}
+
 .stats-container {
     display: flex;
     justify-content: center;
@@ -136,92 +176,99 @@ body {
     color: #807f7f;
 }
 
-/* Mobile View Adjustments */
 @media (max-width: 768px) {
     .header-container {
+        display: flex;
+        flex-direction: column;
         padding: 10px;
     }
 
     .heading {
-        font-size: 35px; /* Increased font size for mobile */
-        margin: 0;
-        text-align: center; /* Center the heading */
+        font-size: 46px;
+        font-weight: 300;
+        color: #393838;
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+        width: 100%; 
     }
+    
 
     .description {
-        max-width: 90%;
         font-size: 14px;
+        color: #555;
         text-align: center;
-        margin: 10px auto;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
-    /* Team member flexbox layout for mobile view */
     .team-container {
-        flex-direction: column; /* Stack team members vertically */
-        align-items: center; /* Center them horizontally */
-        gap: 60px; /* Increased gap between images */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
     }
 
-    /* Team member block styles */
     .team-member {
-        width: 90% !important; /* Full width in mobile view */
-        max-width: none; /* Remove max-width for mobile view */
-        margin-bottom: 70px; /* Space between team members */
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .image-container img {
-        height: auto; /* Maintain aspect ratio */
-        max-height: 300px;
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
     }
 
-    /* Stats Section */
     .stats-container {
+        display: flex;
         flex-direction: row;
-        gap: 2px;
-     }
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        margin-top: 20px;
+    }
 
     .stat {
         text-align: center;
-
     }
 
-    .stat h2 {
-        font-size: 20px;
+    .stats-container .stat h2 {
+        font-size: 24px;
     }
-    .board_heading{
-        margin-top: 60px;
-        text-align: center;
-        font-size: 23px;
-        color: #443838;
-        font-weight: 600;
-        margin-bottom: 60px;
+
+    .stats-container .stat p {
+        font-size: 12px;
     }
-    .underline {
-        width: 50px;
-        height: 2px;
-        background-color: rgb(140, 139, 139);
-        margin: 5px auto;
+
+    .first-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 760px;
     }
-}
-@keyframes fadeIn {
-    from {
+
+    .team-member img {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
     }
-    to {
+
+    .team-member.visible img {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-.team-member {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.team-member.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
