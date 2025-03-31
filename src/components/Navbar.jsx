@@ -41,7 +41,7 @@ const Navbar = ({classname}) => {
         {/* Register Button */}
         <Link
           to="/register"
-          className="hidden md:flex items-center bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition"
+          className="hidden md:flex items-center bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-gray-200 hover:text-black transition"
         >
           REGISTER
           <span className="ml-2">↗</span>
@@ -76,7 +76,7 @@ const Navbar = ({classname}) => {
           {/* Mobile Register Button */}
           <Link
             to="/register"
-            className="block mt-4 text-center bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition"
+            className="block mt-4 text-center bg-white text-black px-5 py-2 rounded-full font-semibold hover:bg-gray-200 hover:text-black transition"
             onClick={() => setIsOpen(false)}
           >
             REGISTER ↗
