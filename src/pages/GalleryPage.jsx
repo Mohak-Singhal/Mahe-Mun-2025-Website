@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './GalleryPage.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -49,18 +49,31 @@ const sectionsData = [
   },
 ];
 
+
 const GalleryGrid = ({ images }) => {
-  const [visibleCount, setVisibleCount] = useState(6); // initially show 6 images
-  const visibleImages = images.slice(0, visibleCount);
-  
+  const [visibleCount, setVisibleCount] = useState(6); 
+  const [isExpanded, setIsExpanded] = useState(false);
+  const gridRef = useRef(null); 
+  const scrollPosition = useRef(0);
+
   const handleShowMore = () => {
+    scrollPosition.current = window.scrollY; 
     setVisibleCount(images.length);
+    setIsExpanded(true);
   };
-  
+
+  const handleShowLess = () => {
+    setVisibleCount(6);
+    setIsExpanded(false);
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition.current, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
-    <div>
+    <div ref={gridRef}>
       <div className="gallery-grid">
-        {visibleImages.map((image, index) => (
+        {images.slice(0, visibleCount).map((image, index) => (
           <div key={index} className="gallery-card">
             <img
               src={allImages[image.fileName]}
@@ -72,16 +85,22 @@ const GalleryGrid = ({ images }) => {
           </div>
         ))}
       </div>
-      {visibleCount < images.length && (
-        <div className="show-more-container">
+      <div className="show-more-container">
+        {!isExpanded && visibleCount < images.length && (
           <button className="show-more-button" onClick={handleShowMore}>
             Show More
           </button>
-        </div>
-      )}
+        )}
+        {isExpanded && (
+          <button className="show-less-button" onClick={handleShowLess}>
+            Show Less
+          </button>
+        )}
+      </div>
     </div>
   );
 };
+
 
 const GallerySection = ({ title, images, subsections }) => (
   <section className="gallery-section">
