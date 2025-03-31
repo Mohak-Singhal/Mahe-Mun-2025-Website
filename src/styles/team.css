@@ -234,14 +234,14 @@ h2 {
 
     .stats-container {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 30px;
-        width: 100%;
-        margin-top: 20px;
+        width: 97%;
     }
 
     .stat {
+        flex-basis: 45%; 
         text-align: center;
     }
 
@@ -250,9 +250,8 @@ h2 {
     }
 
     .stats-container .stat p {
-        font-size: 12px;
+        font-size: 15px;
     }
-
     .first-row {
         display: flex;
         flex-direction: column;
