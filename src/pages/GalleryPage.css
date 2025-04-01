@@ -3,7 +3,7 @@
     --background: #ffffff;
     --card-bg: #f8f8f8;
     --text-dark: #121212;
-    --accent-color: #ff4081;
+    --accent-color: #000000;
     --border-radius: 12px;
     --transition-speed: 0.35s;
     --shadow-dark: rgba(0, 0, 0, 0.15);
@@ -155,5 +155,21 @@ body {
 }
 
 .show-more-button:hover {
-    background: #e04070;
+    background: #333333;
+}
+
+.show-less-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--accent-color); /* Uses black now */
+    color: var(--background);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed) ease;
+    margin-top: 10px;
+}
+
+.show-less-button:hover {
+    background: #333333; /* Darker shade for hover effect */
 }

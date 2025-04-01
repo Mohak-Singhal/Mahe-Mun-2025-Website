@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Team from "./pages/team";
 import Loader from "./components/Loader";
 import ScrollUp from "./components/ScrollUp";
+import AboutUs from "./pages/AboutUs";
 import AugustConference from "./pages/AugustConference";
 import LoadingScreen from "./components/Loader2";
 
@@ -53,6 +54,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
         <Route path="/august-conference" element={<AugustConference />} />
       </Routes>
