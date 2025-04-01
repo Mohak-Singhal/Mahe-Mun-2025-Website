@@ -266,21 +266,35 @@
   margin-top: 4px;
 }
 
-/* back face */
+/* Flip card back */
 .flip-card-back {
   background: linear-gradient(135deg, var(--flip-back-start), var(--flip-back-end));
   transform: rotateY(180deg);
-  padding-top: clamp(15px, 3vw, 20px);
+  padding-top: 20px;
   color: var(--text-color);
-  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-  line-height: 1.4;
-  overflow-y: auto;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; 
+}
+
+/* Content area that scrolls */
+.flip-card-back-content {
+  flex-grow: 1;
+  overflow-y: scroll; 
+  padding-right: 8px; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.flip-card-back-content::-webkit-scrollbar {
+  display: none;
 }
 
 .flip-card-back p {
   margin: clamp(5px, 2vw, 8px) 0;
 }
-
 .committee-eb {
   margin-top: clamp(5px, 2vw, 10px);
 }
@@ -289,11 +303,9 @@
   margin-top: clamp(3px, 1vw, 5px);
 }
 
-/* background guide button */
 .background-guide-btn {
   display: inline-block;
-  margin-top: clamp(8px, 2vw, 12px);
-  padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
+  padding: clamp(6px, 1.5vw, 8px) clamp(8px, 2vw, 10px); 
   font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: bold;
   color: #fff;
@@ -301,6 +313,9 @@
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease;
+  text-align: center;
+  align-self: center; 
+  width: max-content; 
 }
 
 .background-guide-btn:hover {
