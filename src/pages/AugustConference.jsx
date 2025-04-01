@@ -247,7 +247,7 @@ const CommitteeCard = ({ committee }) => {
       onClick={toggleFlip}
     >
       <div className="flip-card-inner">
-        {/* front face */}
+        {/* Front face */}
         <div className="flip-card-front">
           <div className="committee-front-container">
             <div className="committee-logo-container">
@@ -266,21 +266,27 @@ const CommitteeCard = ({ committee }) => {
             </div>
           </div>
         </div>
-        {/* back face */}
+
+        {/* Back face */}
         <div className="flip-card-back">
-        {committee.name !== 'IPM' && (
-          <p className="committee-agenda">
-            <strong>{committee.label ? `${committee.label}:` : 'Agenda:'}</strong> {committee.agenda}
-          </p>
-        )}
-          <div className="committee-eb">
-            {committee.eb &&
-              committee.eb.map((member, i) => (
-                <div key={i} className="committee-eb-member">
-                  <strong>{member.designation}</strong>: {member.name}
-                </div>
-              ))}
+          <div className="flip-card-back-content">
+            {committee.name !== 'IPM' && (
+              <p className="committee-agenda">
+                <strong>{committee.label ? `${committee.label}:` : 'Agenda:'}</strong> {committee.agenda}
+              </p>
+            )}
+
+            <div className="committee-eb">
+              {committee.eb &&
+                committee.eb.map((member, i) => (
+                  <div key={i} className="committee-eb-member">
+                    <strong>{member.designation}</strong>: {member.name}
+                  </div>
+                ))}
+            </div>
           </div>
+
+          {/* bg guide button */}
           <a
             href={committee.backgroundGuide || '/pdfs/default_background.pdf'}
             target="_blank"
