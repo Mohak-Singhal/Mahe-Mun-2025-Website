@@ -6,24 +6,24 @@ import ConferenceHighlights from "../components/ConferenceHighlights";
 import HomeScreen from "../components/HomeScreen";
 import Footer from "../components/Footer";
 import { WavyText } from "../components/textanimation";
-// ✅ LetterSection Component
+
 const LetterSectionGenSec = () => (
   <div className="relative min-h-screen">
-    {/* Background Image */}
+    
     <div
-      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover  opacity-80"
+      className="absolute inset-0 bg-[url('/gensec.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%]  opacity-80"
     ></div>
-    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
+    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
 
-    {/* Main Content */}
+   
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
-      {/* Title */}
+      
       <WavyText
         className="mt-8 text-xl sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
         text="Letter from the Secretary-General"
       />
 
-      {/* Letter Content */}
+      
       <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Dearest Delegates,</strong>
         <br />
@@ -104,20 +104,20 @@ const LetterSectionGenSec = () => (
 
 const LetterSection = () => (
   <div className="relative min-h-screen">
-    {/* Background Image */}
+  
     <div
-      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover bg-center opacity-80"
+      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%] bg-center opacity-80"
     ></div>
-    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-lg"></div>
-    {/* Main Content */}
+    <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
+   
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
-      {/* Title */}
+      
       <WavyText
         className="mt-8 text-[22px] sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
         text="Letter from the President"
       />
 
-      {/* Letter Content */}
+     
       <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Esteemed Delegates,</strong>
         <br />
@@ -170,12 +170,12 @@ const FullImage = ({ src }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]); // Zoom from 1x to 1.2x
 
   return (
-    <div className="w-full h-screen overflow-hidden rounded-t-[7%]">
+    <div className="w-full h-screen overflow-hidden rounded-4xl sm:rounded-t-[7%]">
       <motion.img
         src={src}
         alt="Full View"
         className="w-full h-full object-cover"
-        style={{ scale }} // Apply the scale effect
+        style={{ scale }} 
       />
     </div>
   );
@@ -183,7 +183,7 @@ const FullImage = ({ src }) => {
 
 const DelegatePage = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-[70vh]  bg-[#E5F3F1] rounded-t-[7%] text-black">
+    <div className="flex flex-col items-center justify-center h-[70vh]  bg-[#E5F3F1] rounded-t-4xl sm:rounded-t-[7%] text-black">
       {/* Top Text */}
       <WavyText  className="text-md sm:text-lg tracking-widest font-semibold"
         text="WANNA BECOME A DELEGATE"
@@ -220,27 +220,27 @@ const sections = [
   {
     id: 2,
     content: <LetterSection />,
-    classname: "rounded-t-[7%] bg-gray-200 ",
+    classname: "rounded-4xl sm:rounded-t-[7%] bg-gray-200 ",
   },
   {
     id: 3,
     content: <LetterSectionGenSec />,
-    classname: "rounded-t-[7%] bg-gray-200 ",
+    classname: "rounded-4xl sm:rounded-t-[7%] bg-gray-200 ",
   },
   {
     id: 4,
     content: <ConferenceHighlights />,
-    classname: "rounded-t-[7%] bg-black h-auto",
+    classname: "rounded-4xl sm:rounded-t-[7%] bg-black h-auto",
   },
   {
     id: 5,
     content: <MunStats />,
-    classname: "rounded-t-[7%] bg-[#f2eaea] h-auto  p-4 sm:p-8",
+    classname: "rounded-4xl sm:rounded-t-[7%] bg-[#f2eaea] h-auto  p-4 sm:p-8",
   },
   {
     id: 6,
     content: <FullImage src="/mun.jpg" />,
-    classname: "rounded-t-[7%] h-auto md:h-screen",
+    classname: "rounded-4xl sm:rounded-t-[7%] h-auto md:h-screen",
   },
   {
     id: 7,
@@ -253,12 +253,12 @@ const sections = [
 const Home = () => {
   const { scrollYProgress } = useScroll();
 
-  // Motion animations for sections
+ 
   const homeY = useTransform(scrollYProgress, [0, 0.1], ["0vh", "0vh"]);
   const letterY = useTransform(scrollYProgress, [0.1, 0.25], ["100vh", "-20vh"]); 
   const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], ["100vh", "-20vh"]); 
   const confY = useTransform(scrollYProgress, [0.4, 0.55], ["100vh", "-30vh"]); 
-  const statsY = useTransform(scrollYProgress, [0.55, 0.7], ["100vh", "35vh"]); 
+  const statsY = useTransform(scrollYProgress, [0.45, 0.7], ["100vh", "35vh"]); 
   const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]); 
   const delegateY = useTransform(scrollYProgress, [0.8, 0.95], ["80vh", "45vh"]); 
 

@@ -18,12 +18,13 @@ const Navbar = ({ classname }) => {
 
   // Navigation links
   const navLinks = [
-    { name: "TEAM", path: "/team" },
-    { name: "NEWS", path: "/news" },
+    { name: "AUGUST CONFERENCE", path: "/august-conference" },
     { name: "GALLERY", path: "/gallery" },
+    { name: "NEWS", path: "/news" },
+    { name: "TEAM", path: "/team" },
     { name: "ABOUT US", path: "/about-us" },
     { name: "CONTACT US", path: "footer" }, // Scrolls to footer
-    { name: "AUGUST CONFERENCE", path: "/august-conference" },
+    
   ];
 
   return (
