@@ -330,7 +330,7 @@ const AugustConference = () => {
   return (
     <>
       <Navbar classname="text-white bg-black" />
-      <div className="aug-conference-page">
+      <div className="aug-conference-page mt-26">
         <section className="conference-details">
           <h1>{conferenceDetails.name}</h1>
           <p className="fade-animation delay-1">

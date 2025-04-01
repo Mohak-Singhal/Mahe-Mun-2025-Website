@@ -37,10 +37,10 @@ const AboutUs = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar classname="text-white bg-black " />
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section mt-24">
         <div className="hero-overlay">
           <h1>Shaping Global Leaders of Tomorrow</h1>
         </div>

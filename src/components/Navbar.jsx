@@ -34,7 +34,7 @@ const Navbar = ({ classname }) => {
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src="/logo2.png" alt="Logo" className="h-20 sm:h-26" />
+            <img src="/logo2.png" alt="Logo" className="h-20 sm:h-22" />
           </Link>
         </div>
 

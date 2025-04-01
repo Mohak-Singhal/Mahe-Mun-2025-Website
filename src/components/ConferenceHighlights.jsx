@@ -52,21 +52,19 @@ const ConferenceHighlights = () => {
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover bg-fixed bg-center opacity-60"
+        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover  bg-fixed  opacity-80 rounded-t-[7%]"
         
       ></div>
 
       {/* Main Content */}
-      <div className="relative z-10 bg-black/50 text-white flex flex-col items-center py-4 px-6">
+      <div className="relative z-10 bg-black/50 text-white flex flex-col items-center py-4 px-16 ">
         {/* Header */}
-        <div className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white">
-          CONFERENCE HIGHLIGHTS
-        </div>
-
+        <WavyText className="text-xl sm:text-[50px] text-left font-semibold leading-[1.1] text-white p-5" text="CONFERENCE HIGHLIGHTS"/>
+       
         {/* Day Highlights */}
         {highlights.map((dayHighlight) => (
           <div key={dayHighlight.day} className="max-w-6xl w-full">
-            <h2 className="text-5xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
+            <h2 className="text-4xl font-bold mb-8">{dayHighlight.day} Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {dayHighlight.events.map((event) => (
                 <div

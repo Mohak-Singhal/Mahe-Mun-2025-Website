@@ -230,12 +230,12 @@ const sections = [
   {
     id: 4,
     content: <ConferenceHighlights />,
-    classname: "rounded-t-[7%] bg-black h-auto md:h-screen ",
+    classname: "rounded-t-[7%] bg-black h-auto",
   },
   {
     id: 5,
     content: <MunStats />,
-    classname: "rounded-t-[7%] bg-[#f2eaea] h-auto md:h-screen p-4 sm:p-8",
+    classname: "rounded-t-[7%] bg-[#f2eaea] h-auto  p-4 sm:p-8",
   },
   {
     id: 6,
@@ -255,9 +255,9 @@ const Home = () => {
 
   // Motion animations for sections
   const homeY = useTransform(scrollYProgress, [0, 0.1], ["0vh", "0vh"]);
-  const letterY = useTransform(scrollYProgress, [0.1, 0.25], ["100vh", "0vh"]); 
-  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], ["100vh", "0vh"]); 
-  const confY = useTransform(scrollYProgress, [0.4, 0.55], ["100vh", "0vh"]); 
+  const letterY = useTransform(scrollYProgress, [0.1, 0.25], ["100vh", "-20vh"]); 
+  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], ["100vh", "-20vh"]); 
+  const confY = useTransform(scrollYProgress, [0.4, 0.55], ["100vh", "-30vh"]); 
   const statsY = useTransform(scrollYProgress, [0.55, 0.7], ["100vh", "35vh"]); 
   const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]); 
   const delegateY = useTransform(scrollYProgress, [0.8, 0.95], ["80vh", "45vh"]); 
@@ -302,7 +302,7 @@ const Home = () => {
             >
               <div
                 style={section.style}
-                className={`shadow-xl flex flex-col w-full ${section.classname} text-black overflow-y-auto  scrollbar-hide`}
+                className={`shadow-xl flex flex-col w-full ${section.classname} text-black `}
               >
                 {section.content}
               </div>

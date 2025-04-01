@@ -72,7 +72,7 @@ const GalleryGrid = ({ images }) => {
 
   return (
     <div ref={gridRef}>
-      <div className="gallery-grid">
+      <div className="gallery-grid ">
         {images.slice(0, visibleCount).map((image, index) => (
           <div key={index} className="gallery-card">
             <img
@@ -122,7 +122,7 @@ const GalleryPage = () => {
   return (
     <>
       <Navbar classname="text-white bg-black"/>
-      <div className="gallery-page">
+      <div className="gallery-page mt-18">
         {sectionsData.map((section, index) => (
           <GallerySection
             key={index}
