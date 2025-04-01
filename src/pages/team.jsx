@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { Linkedin } from "lucide-react";
 import "../styles/team.css";
@@ -28,7 +27,6 @@ const Team = () => {
     const [counts, setCounts] = useState(stats.map(() => 0));
     const observerRef = useRef(null);
 
-  
     useEffect(() => {
         observerRef.current = new IntersectionObserver(
             (entries) => {
@@ -72,9 +70,6 @@ const Team = () => {
                     <h1 className="heading">Meet Our Team</h1>
                     <div className="divider"></div>
                 </div>
-                
-                {}
-
                 <p className="description">
                     Our team consists of dedicated professionals who work tirelessly to bring the best
                     experience. Meet the amazing people making it all happen!
@@ -88,10 +83,9 @@ const Team = () => {
                             <p>{stat.label}</p>
                         </div>
                     ))}
-                    </div>
+            </div>
 
-            {}
-            <h2>Board of Directors</h2>
+            <h2 className="board_heading">Board of Directors</h2>
             <div className="first-row">
                 {teamMembers.slice(0, 2).map((member, index) => (
                     <div 
@@ -112,7 +106,6 @@ const Team = () => {
                 ))}
             </div>
 
-            {}
             <div className="grid-container">
                 {teamMembers.slice(2).map((member, index) => (
                     <div 
@@ -133,8 +126,8 @@ const Team = () => {
                 ))}
             </div>
         </div>
-        <Footer/>
-        </>
+        <Footer />
+      </>
     );
 };
 
