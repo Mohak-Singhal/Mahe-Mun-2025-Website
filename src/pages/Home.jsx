@@ -292,9 +292,6 @@ const Home = () => {
             case 5:
               translateY = imageY;
               break;
-            case 6:
-              translateY = delegateY;
-              break;
             default:
               translateY = "0vh";
           }
