@@ -64,7 +64,7 @@ const Team = () => {
       <>
       <Navbar classname="text-white bg-black"/>
       
-        <div className="p-5">
+        <div className="p-5 sm:p-8 mt-26">
             <div className="header-container">
                 <div>
                     <h1 className="heading">Meet Our Team</h1>
