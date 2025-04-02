@@ -80,12 +80,12 @@ const Team = () => {
                         <div className="stat" key={index}>
                             <h2>{counts[index]}+</h2>
                             <div className="underline"></div>
-                            <p>{stat.label}</p>
+                            <p className="font-['FlatterySerif']">{stat.label}</p>
                         </div>
                     ))}
             </div>
 
-            <h2 className="board_heading">Board of Directors</h2>
+            <h2 className="board_heading font-['FlatterySerif']">Board of Directors</h2>
             <div className="first-row">
                 {teamMembers.slice(0, 2).map((member, index) => (
                     <div 

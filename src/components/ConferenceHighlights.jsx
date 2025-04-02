@@ -52,7 +52,7 @@ const ConferenceHighlights = () => {
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-[url('/mun1.jpg')] bg-cover  bg-fixed  opacity-80 rounded-[7%]"
+        className="absolute inset-0 bg-[url('/mun2.jpg')] bg-cover  bg-fixed  opacity-80 rounded-[7%]"
         
       ></div>
 

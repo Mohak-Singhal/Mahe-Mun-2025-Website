@@ -17,6 +17,7 @@ body {
 }
 
 .heading {
+    font-family: "FlatterySerif", serif;
     font-size: 46px;
     font-weight: 300;
     color: #393838;
@@ -184,6 +185,7 @@ h2 {
     }
 
     .heading {
+        font-family: "FlatterySerif", serif;
         font-size: 46px;
         font-weight: 300;
         color: #393838;
