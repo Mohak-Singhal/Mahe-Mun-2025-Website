@@ -184,7 +184,7 @@ const Navbar = ({ classname }) => {
                   className="bg-white text-black px-8 py-3 rounded-full font-semibold transition-all hover:bg-gray-100 shadow-lg hover:shadow-xl"
                   onClick={() => setIsOpen(false)}
                 >
-                  REGISTER ↗
+                  REGISTER  ↗
                 </Link>
               </motion.div>
             </motion.div>

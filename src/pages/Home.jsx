@@ -230,7 +230,7 @@ const sections = [
   {
     id: 4,
     content: <ConferenceHighlights />,
-    classname: "rounded-4xl sm:rounded-t-[7%] bg-black h-auto",
+    classname: "rounded-4xl sm:rounded-[7%] bg-black h-auto",
   },
   {
     id: 5,
@@ -250,17 +250,27 @@ const sections = [
 
 ];
 
+
+
 const Home = () => {
   const { scrollYProgress } = useScroll();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
- 
+  // Detect screen width changes
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Define transformation values based on screen size
   const homeY = useTransform(scrollYProgress, [0, 0.1], ["0vh", "0vh"]);
-  const letterY = useTransform(scrollYProgress, [0.1, 0.25], ["100vh", "-20vh"]); 
-  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], ["100vh", "-20vh"]); 
-  const confY = useTransform(scrollYProgress, [0.4, 0.55], ["100vh", "-30vh"]); 
-  const statsY = useTransform(scrollYProgress, [0.45, 0.7], ["100vh", "35vh"]); 
-  const imageY = useTransform(scrollYProgress, [0.7, 0.85], ["100vh", "0vh"]); 
-  const delegateY = useTransform(scrollYProgress, [0.8, 0.95], ["80vh", "45vh"]); 
+  const letterY = useTransform(scrollYProgress, [0.1, 0.25], isMobile ? ["120vh", "-80vh"] : ["100vh", "-20vh"]);
+  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], isMobile ? ["120vh", "-62vh"] : ["100vh", "-20vh"]);
+  const confY = useTransform(scrollYProgress, [0.4, 0.55], isMobile ? ["140vh", "-125vh"] : ["100vh", "-50vh"]);
+  const statsY = useTransform(scrollYProgress, [0.45, 0.7], isMobile ? ["140vh", "20vh"] : ["100vh", "35vh"]);
+  const imageY = useTransform(scrollYProgress, [0.7, 0.85], isMobile ? ["140vh", "20vh"] : ["100vh", "0vh"]);
+  const delegateY = useTransform(scrollYProgress, [0.8, 0.95], isMobile ? ["120vh", "50vh"] : ["80vh", "45vh"]);
 
   return (
     <div className="min-h-screen max-w-full bg-gradient-to-b from-gray-50 to-white">
@@ -289,7 +299,6 @@ const Home = () => {
             case 6:
               translateY = delegateY;
               break;
-        
             default:
               translateY = "0vh";
           }
@@ -297,7 +306,7 @@ const Home = () => {
           return (
             <motion.li
               key={section.id}
-              className="sticky top-0 flex justify-center" // Ensure each section takes full height
+              className="sticky top-0 flex justify-center"
               style={{ y: translateY }}
             >
               <div
@@ -310,9 +319,10 @@ const Home = () => {
           );
         })}
       </ul>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
+
 
 export default Home;

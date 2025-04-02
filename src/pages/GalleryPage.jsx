@@ -122,7 +122,7 @@ const GalleryPage = () => {
   return (
     <>
       <Navbar classname="text-white bg-black"/>
-      <div className="gallery-page mt-18">
+      <div className="gallery-page  ">
         {sectionsData.map((section, index) => (
           <GallerySection
             key={index}
