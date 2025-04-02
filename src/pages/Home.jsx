@@ -242,11 +242,7 @@ const sections = [
     content: <FullImage src="/mun.jpg" />,
     classname: "rounded-4xl sm:rounded-t-[7%] h-auto md:h-screen",
   },
-  {
-    id: 7,
-    content: <DelegatePage />,
-    classname: "",
-  },
+  
 
 ];
 
@@ -269,7 +265,7 @@ const Home = () => {
   const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], isMobile ? ["120vh", "-62vh"] : ["100vh", "-20vh"]);
   const confY = useTransform(scrollYProgress, [0.4, 0.55], isMobile ? ["140vh", "-125vh"] : ["100vh", "-50vh"]);
   const statsY = useTransform(scrollYProgress, [0.45, 0.7], isMobile ? ["140vh", "20vh"] : ["100vh", "35vh"]);
-  const imageY = useTransform(scrollYProgress, [0.7, 0.85], isMobile ? ["140vh", "20vh"] : ["100vh", "0vh"]);
+  const imageY = useTransform(scrollYProgress, [0.7, 1], isMobile ? ["140vh", "20vh"] : ["100vh", "45vh"]);
   const delegateY = useTransform(scrollYProgress, [0.8, 0.95], isMobile ? ["120vh", "50vh"] : ["80vh", "45vh"]);
 
   return (
@@ -295,9 +291,6 @@ const Home = () => {
               break;
             case 5:
               translateY = imageY;
-              break;
-            case 6:
-              translateY = delegateY;
               break;
             default:
               translateY = "0vh";
