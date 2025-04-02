@@ -60,6 +60,7 @@ const HomeScreen = () => {
 
   return (
     <>
+    <Navbar classname="text-white"/>
     <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 -z-1">
