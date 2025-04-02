@@ -104,11 +104,11 @@ const GalleryGrid = ({ images }) => {
 
 const GallerySection = ({ title, images, subsections }) => (
   <section className="gallery-section">
-    <h2 className="gallery-section-title">{title}</h2>
+    <h2 className="gallery-section-title font-['FlatterySerif']">{title}</h2>
     {subsections ? (
       subsections.map((sub, index) => (
         <div key={index}>
-          <h3 className="gallery-subsection-title">{sub.title}</h3>
+          <h3 className="gallery-subsection-title font-['FlatterySerif']">{sub.title}</h3>
           <GalleryGrid images={sub.images} />
         </div>
       ))

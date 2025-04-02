@@ -331,7 +331,7 @@ const AugustConference = () => {
     <>
       <Navbar classname="text-white bg-black" />
       <div className="aug-conference-page mt-26">
-        <section className="conference-details">
+        <section className="conference-details font-['FlatterySerif']">
           <h1>{conferenceDetails.name}</h1>
           <p className="fade-animation delay-1">
             <strong>Venue:</strong> {conferenceDetails.venue}
@@ -356,10 +356,10 @@ const AugustConference = () => {
         </section>
 
         <section className="committees-section">
-          <h2 className="section-title">Committees</h2>
+          <h2 className="section-title font-['FlatterySerif']">Committees</h2>
           {filteredData.map((tierData, index) => (
             <div key={index} className="tier-section">
-              <h3 className="tier-title">{tierData.tier}</h3>
+              <h3 className="tier-title font-['FlatterySerif']">{tierData.tier}</h3>
               <div className="committees-grid">
                 {tierData.committees.map((committee, idx) => (
                   <CommitteeCard key={idx} committee={committee} />

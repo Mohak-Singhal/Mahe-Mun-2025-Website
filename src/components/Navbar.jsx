@@ -21,7 +21,7 @@ const Navbar = ({ classname }) => {
     { name: "GALLERY", path: "/gallery" },
     { name: "NEWS", path: "/news" },
     { name: "TEAM", path: "/team" },
-    { name: "ABOUT US", path: "/about-us" },
+    // { name: "ABOUT US", path: "/about-us" },
     { name: "CONTACT US", path: "footer" },
   ];
 

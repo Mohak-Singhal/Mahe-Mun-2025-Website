@@ -61,7 +61,7 @@ const HomeScreen = () => {
   return (
     <>
     <Navbar classname="text-white"/>
-    <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
+    <div ref={homeRef} className="relative h-screen w-full overflow-hidden font-['FlatterySerif']">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 -z-1">
         <div
@@ -90,8 +90,8 @@ const HomeScreen = () => {
 
           {/* Event Date & Location */}
           <p
-            className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium tracking-wide bg-gray-900/70 
-      px-6 py-2 rounded-lg shadow-md border border-gray-600 backdrop-blur-md 
+            className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium tracking-wide  
+      px-6 py-2 rounded-lg shadow-md border bg-gradient-to-b from-black/90 to-gray-900/90 backdrop-blur-md
       text-gray-300"
           >
             <span className="font-semibold text-white">15-17 AUG</span> |
