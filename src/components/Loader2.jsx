@@ -75,7 +75,7 @@ const LoadingScreen = () => {
       <motion.div className="mt-6 text-xl font-medium text-gray-300">
         <motion.span
           key={loadingIndex}
-          className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-white"
+          className="bg-clip-text text-transparent font-['FlatterySerif'] bg-gradient-to-r from-gray-200 to-white"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}

@@ -106,7 +106,7 @@ const LetterSection = () => (
   <div className="relative min-h-screen">
   
     <div
-      className="absolute inset-0 bg-[url('/mun3.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%] bg-center opacity-80"
+      className="absolute inset-0 bg-[url('/riya.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%] bg-center opacity-80"
     ></div>
     <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
    
