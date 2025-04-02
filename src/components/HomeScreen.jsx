@@ -61,7 +61,6 @@ const HomeScreen = () => {
   return (
     <>
     <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
-      <Navbar classname="text-white"/>
       {/* Background Image Carousel */}
       <div className="absolute inset-0 -z-1">
         <div
@@ -82,7 +81,7 @@ const HomeScreen = () => {
           {/* Animated Title */}
           <h1
             ref={titleRef}
-            className="font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
+            className="font-['FlatterySerif'] font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
       text-white drop-shadow-md"
           >
             MAHE MUN
