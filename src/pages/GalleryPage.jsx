@@ -85,9 +85,9 @@ const GalleryGrid = ({ images }) => {
           </div>
         ))}
       </div>
-      <div className="show-more-container">
+      <div className="show-more-container font-['Inter']">
         {!isExpanded && visibleCount < images.length && (
-          <button className="show-more-button" onClick={handleShowMore}>
+          <button className="show-more-button " onClick={handleShowMore}>
             Show More
           </button>
         )}
