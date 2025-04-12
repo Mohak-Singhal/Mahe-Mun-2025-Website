@@ -153,6 +153,13 @@
   .committees-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .whsr-card {
+    grid-column: 1 / -1;
+    width: 50%;
+    max-width: 550px;
+    min-width: 350px;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -455,10 +462,18 @@
   pointer-events: none;
 }
 
-/* .committee-front-container,
+.committee-front-container,
 .flip-card-back-content,
 .background-guide-btn {
   position: relative;
   z-index: 2;
-} */
+}
+.overlay-layer {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.63); /* white with 75% opacity */
+  z-index: 1;
+  border-radius: inherit; /* so it matches the card shape */
+  pointer-events: none;
+}
 
