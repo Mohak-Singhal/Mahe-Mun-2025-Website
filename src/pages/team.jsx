@@ -19,7 +19,7 @@ const teamMembers = [
     { name: "Shweta Banerjee", role: "Director of Collaborations & Public Relations", img: "/team_mem_pics/collab_public.jpg", linkedin: "#" },
     { name: "Ekansh Bansal", role: "Director of Finance & Technology", img: "/team_mem_pics/finance_tech.jpg", linkedin: "#" },
     { name: "Devansh Tandon", role: "Director of Management", img: "/team_mem_pics/management.jpg", linkedin: "#" },
-    { name: "Mahalakshmi Venkataraman", role: "Director of Design", img: "/team_mem_pics/design.jpg", linkedin: "#" }
+    { name: "Mahalakshmy Venkataraman", role: "Director of Design", img: "/team_mem_pics/design.jpg", linkedin: "#" }
 ];
 
 const Team = () => {
