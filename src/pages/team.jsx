@@ -64,13 +64,13 @@ const Team = () => {
       <>
       <Navbar classname="text-white bg-black"/>
       
-        <div className="p-5 sm:p-8 mt-26">
+        <div className="p-5 sm:p-8 mt-26 ">
             <div className="header-container">
                 <div>
-                    <h1 className="heading">Meet Our Team</h1>
+                    <h1 className="heading font-['Norwester']">Meet Our Team</h1>
                     <div className="divider"></div>
                 </div>
-                <p className="description">
+                <p className="font-['Inter'] description">
                     Our team consists of dedicated professionals who work tirelessly to bring the best
                     experience. Meet the amazing people making it all happen!
                 </p>
@@ -80,12 +80,12 @@ const Team = () => {
                         <div className="stat" key={index}>
                             <h2>{counts[index]}+</h2>
                             <div className="underline"></div>
-                            <p className="font-['FlatterySerif']">{stat.label}</p>
+                            <p className="font-['Norwester']">{stat.label}</p>
                         </div>
                     ))}
             </div>
 
-            <h2 className="board_heading font-['FlatterySerif']">Board of Directors</h2>
+            <h2 className="board_heading font-['Norwester']">Board of Directors</h2>
             <div className="first-row">
                 {teamMembers.slice(0, 2).map((member, index) => (
                     <div 
@@ -118,7 +118,7 @@ const Team = () => {
                                 <Linkedin size={20} />
                             </a>
                         </div>
-                        <div className="info">
+                        <div className="info font-['Inter'] ">
                             <h3>{member.name}</h3>
                             <p>{member.role}</p>
                         </div>

@@ -57,7 +57,8 @@ const ConferenceHighlights = () => {
       ></div>
 
       {/* Main Content */}
-      <div className="relative z-10 bg-black/50 rounded-[7%] text-white flex flex-col items-center py-4 px-8 sm:px-16 ">
+
+      <div style={{ fontFamily: 'Inter, sans-serif' }} className="relative z-10 bg-black/50 rounded-[7%] text-white flex flex-col items-center py-4 px-16 px-8 sm:px-16 ">
         {/* Header */}
         <WavyText className="text-[28px] sm:text-[50px] text-left font-semibold leading-[1.1] text-white p-5" text="CONFERENCE HIGHLIGHTS"/>
        

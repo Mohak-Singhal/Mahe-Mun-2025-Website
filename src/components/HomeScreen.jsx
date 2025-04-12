@@ -82,7 +82,7 @@ const HomeScreen = () => {
           {/* Animated Title */}
           <h1
             ref={titleRef}
-            className="font-['FlatterySerif'] font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
+            className="font-['FlatterySerif']  font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
       text-white drop-shadow-md"
           >
             MAHE MUN
@@ -94,8 +94,12 @@ const HomeScreen = () => {
       px-6 py-2 rounded-lg shadow-md border bg-gradient-to-b from-black/90 to-gray-900/90 backdrop-blur-md
       text-gray-300"
           >
-            <span className="font-semibold text-white">15-17 AUG</span> |
-            <span className="text-white font-semibold"> MAHE MUN</span>
+            <span  className="font-['Inter']  font-semibold text-white mr-2">
+  15-17 AUG 
+</span> 
+<span  className="font-['Inter']  font-semibold text-white">
+    | MAHE MUN
+</span>
           </p>
 
           {/* Engaging Subtitle */}

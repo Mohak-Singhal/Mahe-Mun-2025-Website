@@ -40,7 +40,7 @@ const Navbar = ({ classname }) => {
 
   return (
     <nav
-      className={`${classname} fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`${classname} font-['Inter'] fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isSticky ? "bg-black/95 shadow-lg" : "bg-black/70 "
       }`}
     >

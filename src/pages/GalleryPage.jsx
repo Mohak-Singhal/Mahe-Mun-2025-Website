@@ -85,9 +85,9 @@ const GalleryGrid = ({ images }) => {
           </div>
         ))}
       </div>
-      <div className="show-more-container">
+      <div className="show-more-container font-['Inter']">
         {!isExpanded && visibleCount < images.length && (
-          <button className="show-more-button" onClick={handleShowMore}>
+          <button className="show-more-button " onClick={handleShowMore}>
             Show More
           </button>
         )}
@@ -104,11 +104,11 @@ const GalleryGrid = ({ images }) => {
 
 const GallerySection = ({ title, images, subsections }) => (
   <section className="gallery-section">
-    <h2 className="gallery-section-title font-['FlatterySerif']">{title}</h2>
+    <h2 className="gallery-section-title font-['Norwester']">{title}</h2>
     {subsections ? (
       subsections.map((sub, index) => (
         <div key={index}>
-          <h3 className="gallery-subsection-title font-['FlatterySerif']">{sub.title}</h3>
+          <h3 className="gallery-subsection-title font-['Norwester']">{sub.title}</h3>
           <GalleryGrid images={sub.images} />
         </div>
       ))
