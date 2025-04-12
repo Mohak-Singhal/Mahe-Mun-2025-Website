@@ -94,8 +94,12 @@ const HomeScreen = () => {
       px-6 py-2 rounded-lg shadow-md border bg-gradient-to-b from-black/90 to-gray-900/90 backdrop-blur-md
       text-gray-300"
           >
-            <span className="font-semibold text-white">15-17 AUG</span> |
-            <span className="text-white font-semibold"> MAHE MUN</span>
+            <span style={{ fontFamily: 'Poppins, sans-serif' }} className="font-semibold text-white">
+  15-17 AUG
+</span> |
+<span style={{ fontFamily: 'Poppins, sans-serif' }} className="font-semibold text-white">
+  MAHE MUN
+</span>
           </p>
 
           {/* Engaging Subtitle */}

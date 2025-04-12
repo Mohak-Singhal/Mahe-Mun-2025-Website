@@ -16,7 +16,7 @@ const LetterSectionGenSec = () => (
     <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
 
    
-    <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
+    <div style={{ fontFamily: 'Inter, sans-serif' }} className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
       
       <WavyText
         className="mt-8 text-xl sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
@@ -118,7 +118,7 @@ const LetterSection = () => (
       />
 
      
-      <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
+      <p style={{ fontFamily: 'Inter, sans-serif' }}  className=" mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Esteemed Delegates,</strong>
         <br />
         <br />
