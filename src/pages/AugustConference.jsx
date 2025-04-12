@@ -284,7 +284,7 @@ const CommitteeCard = ({ committee }) => {
 
   return (
     <div
-      className={`committee-card ${flipped ? 'flipped' : ''}`}
+      className={`font-['Inter'] committee-card ${flipped ? 'flipped' : ''}`}
       onClick={toggleFlip}
     >
       <div className="flip-card-inner">
@@ -383,9 +383,9 @@ const AugustConference = () => {
   return (
     <>
       <Navbar classname="text-white bg-black" />
-      <div className="aug-conference-page mt-26">
+      <div className="font-['Inter']  aug-conference-page mt-26">
         <section className="conference-details">
-          <h1>{conferenceDetails.name}</h1>
+          <h1 className="font-['Norwester']">{conferenceDetails.name}</h1>
           <p className="fade-animation delay-1">
             <strong>Venue:</strong> {conferenceDetails.venue}
           </p>
@@ -409,10 +409,10 @@ const AugustConference = () => {
         </section>
 
         <section className="committees-section">
-          <h2 className="section-title">Committees</h2>
+          <h2 className="font-['Norwester'] section-title">Committees</h2>
           {filteredData.map((tierData, index) => (
             <div key={index} className="tier-section">
-              <h3 className="tier-title">{tierData.tier}</h3>
+              <h3 className="font-['Norwester'] tier-title">{tierData.tier}</h3>
               <div className="committees-grid">
                 {tierData.committees.map((committee, idx) => (
                   <CommitteeCard key={idx} committee={committee} />

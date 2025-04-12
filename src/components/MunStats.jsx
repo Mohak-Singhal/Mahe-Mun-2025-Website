@@ -14,13 +14,13 @@ const MunStats = () => {
   const isInView = useInView(statsRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="w-full bg-[#f2eaea] py-12 px-6 sm:px-12 lg:px-24">
+    <div className="font-['Norwester'] w-full bg-[#f2eaea] py-12 px-6 sm:px-12 lg:px-24">
       {/* Section Heading */}
       <WavyText
-        className="text-center text-2xl font-bold text-black leading-snug"
+        className="font-['Norwester'] text-center text-2xl font-bold text-black leading-snug"
         style={{
-          fontSize: "clamp(1.8rem, 4vw, 3rem)", 
-          fontFamily: "'Poppins', sans-serif"
+          fontSize: "clamp(1.8rem, 4.5vw, 3.5rem)", 
+         
         }}
         text="Our Diverse Participants"
       />

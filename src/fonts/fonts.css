@@ -4,3 +4,9 @@
     font-weight: 400;
     font-style: normal;
   }
+  @font-face {
+    font-family: "Norwester";
+    src: url("./norwester.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
