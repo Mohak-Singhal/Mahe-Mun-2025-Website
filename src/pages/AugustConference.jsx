@@ -32,6 +32,7 @@ const committeesData = [
         subInfo: 'Crisis Committee, National Security',
         frontImage: '/committees_images/whsr_front.jpg',
         backImage: '/committees_images/whsr_back.jpg',
+        customClass: 'whsr-card'
       },
       {
         name: 'INTERPOL',
@@ -284,7 +285,8 @@ const CommitteeCard = ({ committee }) => {
 
   return (
     <div
-      className={`font-['Inter'] committee-card ${flipped ? 'flipped' : ''}`}
+
+      className={`font-['Inter'] committee-card ${flipped ? 'flipped' : ''} ${committee.customClass || ''}`}
       onClick={toggleFlip}
     >
       <div className="flip-card-inner">
@@ -293,6 +295,7 @@ const CommitteeCard = ({ committee }) => {
           className="flip-card-front"
           style={{ backgroundImage: `url(${frontImage})` }}
         >
+          <div className="overlay-layer" />
           <div className="committee-front-container">
             <div className="committee-logo-container">
               <img
@@ -316,6 +319,7 @@ const CommitteeCard = ({ committee }) => {
           className="flip-card-back"
           style={{ backgroundImage: `url(${backImage})` }}
         >
+          <div className="overlay-layer" />
           <div className="flip-card-back-content">
             {committee.name !== 'IPM' && (
               <p className="committee-agenda">

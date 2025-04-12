@@ -52,12 +52,13 @@ const ConferenceHighlights = () => {
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-[url('/mun2.jpg')] bg-cover  bg-fixed  opacity-80 rounded-[7%]"
+        className="absolute inset-0 bg-[url('/munmob.jpg')] sm:bg-[url('/mun2.jpg')] bg-cover  bg-fixed  opacity-80 rounded-[7%]"
         
       ></div>
 
       {/* Main Content */}
-      <div style={{ fontFamily: 'Inter, sans-serif' }} className="relative z-10 bg-black/50 rounded-[7%] text-white flex flex-col items-center py-4 px-16 ">
+
+      <div style={{ fontFamily: 'Inter, sans-serif' }} className="relative z-10 bg-black/50 rounded-[7%] text-white flex flex-col items-center py-4 px-16 px-8 sm:px-16 ">
         {/* Header */}
         <WavyText className="text-[28px] sm:text-[50px] text-left font-semibold leading-[1.1] text-white p-5" text="CONFERENCE HIGHLIGHTS"/>
        
