@@ -40,7 +40,7 @@ const AboutUs = () => {
       <Navbar classname="text-white bg-black " />
 
       {/* Hero Section */}
-      <section className="hero-section mt-24">
+      <section className="hero-section mt-20 md:mt-28 ">
         <div className="hero-overlay">
           <h1>Shaping Global Leaders of Tomorrow</h1>
         </div>

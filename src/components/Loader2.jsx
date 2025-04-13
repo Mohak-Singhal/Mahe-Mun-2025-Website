@@ -29,7 +29,7 @@ const LoadingScreen = () => {
 
       {/* "MAHE MUN" Animated Text */}
       <motion.h1
-        className="text-6xl md:text-8xl font-bold tracking-wide bg-gradient-to-r from-gray-300 via-white to-gray-100 text-transparent bg-clip-text"
+        className="font-['FlatterySerif'] text-6xl md:text-8xl font-bold tracking-wide bg-gradient-to-r from-gray-300 via-white to-gray-100 text-transparent bg-clip-text"
         initial={{ opacity: 0, scale: 0.8, y: -50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
@@ -75,7 +75,7 @@ const LoadingScreen = () => {
       <motion.div className="mt-6 text-xl font-medium text-gray-300">
         <motion.span
           key={loadingIndex}
-          className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-white"
+          className="font-['Inter']  bg-clip-text text-transparent font-['FlatterySerif'] bg-gradient-to-r from-gray-200 to-white"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}

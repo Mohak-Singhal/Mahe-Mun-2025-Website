@@ -60,8 +60,8 @@ const HomeScreen = () => {
 
   return (
     <>
-    <div ref={homeRef} className="relative h-screen w-full overflow-hidden">
-      <Navbar classname="text-white"/>
+    <Navbar classname="text-white"/>
+    <div ref={homeRef} className="relative h-screen w-full overflow-hidden font-['FlatterySerif']">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 -z-1">
         <div
@@ -82,7 +82,7 @@ const HomeScreen = () => {
           {/* Animated Title */}
           <h1
             ref={titleRef}
-            className="font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
+            className="font-['FlatterySerif']  font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase tracking-wide 
       text-white drop-shadow-md"
           >
             MAHE MUN
@@ -90,12 +90,16 @@ const HomeScreen = () => {
 
           {/* Event Date & Location */}
           <p
-            className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium tracking-wide bg-gray-900/70 
-      px-6 py-2 rounded-lg shadow-md border border-gray-600 backdrop-blur-md 
+            className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium tracking-wide  
+      px-6 py-2 rounded-lg shadow-md border bg-gradient-to-b from-black/90 to-gray-900/90 backdrop-blur-md
       text-gray-300"
           >
-            <span className="font-semibold text-white">15-17 AUG</span> |
-            <span className="text-white font-semibold"> MAHE MUN</span>
+            <span  className="font-['Inter']  font-semibold text-white mr-2">
+  15-17 AUG 
+</span> 
+<span  className="font-['Inter']  font-semibold text-white">
+    | MAHE MUN
+</span>
           </p>
 
           {/* Engaging Subtitle */}

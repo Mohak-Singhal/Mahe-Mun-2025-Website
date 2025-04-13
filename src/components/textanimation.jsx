@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 export const WavyText = ({ text, className = "" }) => {
     return (
       <motion.h1
-        className={`overflow-hidden flex ${className}`} // Allows external styling
+        className={`overflow-hidden flex font-['FlatterySerif'] ${className}`} // Allows external styling
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }} // Triggers animation on scroll

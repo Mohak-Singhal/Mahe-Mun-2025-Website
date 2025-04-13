@@ -1,6 +1,6 @@
 /* Overall */
 :root {
-    --background: #ffffff;
+    --background: #eeeeee;
     --card-bg: #f8f8f8;
     --text-dark: #121212;
     --accent-color: #000000;
@@ -61,7 +61,8 @@ body {
 .gallery-subsection-title {
     font-size: 1.8rem;
     text-align: center;
-    margin: 20px 0;
+    margin: 48px ;
+    
     color: var(--text-dark);
     text-transform: uppercase;
 }

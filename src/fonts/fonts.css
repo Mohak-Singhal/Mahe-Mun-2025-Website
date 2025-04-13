@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "FlatterySerif";
+    src: url("./FlatterySerif.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Norwester";
+    src: url("./norwester.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
