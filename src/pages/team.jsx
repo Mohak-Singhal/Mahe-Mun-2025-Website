@@ -79,7 +79,7 @@ const Team = () => {
         <div className="stats-container font-['Norwester']">
           {stats.map((stat, index) => (
             <div className="stat" key={index}>
-              <h2>{counts[index]}+</h2>
+              <h2 className="font-['Inter']">{counts[index]}+</h2>
               <div className="underline"></div>
               <p>{stat.label}</p>
             </div>
