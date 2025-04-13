@@ -207,38 +207,6 @@ const FullImage = ({ src }) => {
   );
 };
 
-const DelegatePage = () => {
-  return (
-    <div className="flex flex-col items-center justify-center h-[70vh]  bg-[#E5F3F1] rounded-t-4xl sm:rounded-t-[7%] text-black">
-      {/* Top Text */}
-      <WavyText
-        className="text-md sm:text-lg tracking-widest font-semibold"
-        text="WANNA BECOME A DELEGATE"
-      />
-
-      {/* Main Heading */}
-      <WavyText
-        className="text-5xl sm:text-8xl font-bold text-center leading-none mt-4"
-        text="LET'S WORK"
-      />
-
-      <WavyText
-        className="text-5xl sm:text-8xl font-bold text-center leading-none"
-        text="TOGETHER"
-      />
-
-      <div className="flex">
-        <button className="mt-6 flex items-center gap-3 bg-black text-white px-6 py-3 rounded-full text-md sm:text-lg font-semibold hover:scale-105 transition">
-          GET IN TOUCH
-        </button>
-        <button className="mt-6 flex items-center gap-3 bg-black text-white px-6 py-3 rounded-[60%] text-md sm:text-lg font-semibold hover:scale-105 transition">
-          <ArrowUpRight size={24} />
-        </button>
-      </div>
-    </div>
-  );
-};
-
 const sections = [
   {
     id: 1,
@@ -289,12 +257,12 @@ const Home = () => {
   const letterY = useTransform(
     scrollYProgress,
     [0.01, 0.25],
-    isMobile ? ["120vh", "-95vh"] : ["100vh", "-20vh"]
+    isMobile ? ["120vh", "-130vh"] : ["100vh", "-20vh"]
   );
   const letterY2 = useTransform(
     scrollYProgress,
     [0.25, 0.4],
-    isMobile ? ["120vh", "-82vh"] : ["100vh", "-20vh"]
+    isMobile ? ["120vh", "-112vh"] : ["100vh", "-20vh"]
   );
   const confY = useTransform(
     scrollYProgress,
@@ -310,11 +278,6 @@ const Home = () => {
     scrollYProgress,
     [0.39, 1],
     isMobile ? ["140vh", "39vh"] : ["100vh", "45vh"]
-  );
-  const delegateY = useTransform(
-    scrollYProgress,
-    [0.8, 0.95],
-    isMobile ? ["120vh", "50vh"] : ["80vh", "45vh"]
   );
 
   return (
