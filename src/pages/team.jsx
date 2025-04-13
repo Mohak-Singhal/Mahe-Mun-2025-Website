@@ -64,19 +64,19 @@ const Team = () => {
     <>
       <Navbar classname="text-white bg-black" />
 
-      <div className="p-5">
+      <div className="p-5 mt-22">
         <div className="header-container">
           <div>
-            <h1 className="heading">Meet Our Team</h1>
+            <h1 className="heading font-['Norwester']">Meet Our Team</h1>
             <div className="divider"></div>
           </div>
-          <p className="description">
+          <p className="description font-['Inter']">
             Our team consists of dedicated professionals who work tirelessly to bring the best
             experience. Meet the amazing people making it all happen!
           </p>
         </div>
 
-        <div className="stats-container">
+        <div className="stats-container font-['Norwester']">
           {stats.map((stat, index) => (
             <div className="stat" key={index}>
               <h2>{counts[index]}+</h2>
@@ -86,7 +86,7 @@ const Team = () => {
           ))}
         </div>
 
-        <h2 className="board_heading">Board of Directors</h2>
+        <h2 className="board_heading font-['Norwester']">Board of Directors</h2>
         <div className="first-row">
           {teamMembers.slice(0, 2).map((member, index) => (
             <div
@@ -96,7 +96,7 @@ const Team = () => {
               <div className="image-container">
                 <img src={member.img} alt={member.name} />
               </div>
-              <div className="info" >
+              <div className="info font-['Inter']" >
 
                 <h3 className="name-email">{member.name}</h3>
                 <p>{member.role}</p>
