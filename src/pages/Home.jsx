@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import {ArrowUpRight,} from "lucide-react"; 
+import { ArrowUpRight } from "lucide-react";
 import MunStats from "../components/MunStats";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ConferenceHighlights from "../components/ConferenceHighlights";
@@ -9,34 +9,29 @@ import { WavyText } from "../components/textanimation";
 
 const LetterSectionGenSec = () => (
   <div className="relative min-h-screen">
-    
-    <div
-      className="absolute inset-0 bg-[url('/sashmob.jpg')] sm:bg-[url('/gensec.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%]  opacity-80 bg-center"
-    ></div>
+    <div className="absolute inset-0 bg-[url('/sashmob.jpg')] sm:bg-[url('/gensec.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%]  opacity-80 bg-center"></div>
     <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
 
-   
-    <div  className="font-['Inter'] relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
-      
+    <div className="font-['Inter'] relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
       <WavyText
         className="mt-8 text-xl sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
         text="Letter from the Secretary-General"
       />
 
-      
       <p className="mt-6 text-gray-700 text-sm font-semibold text-justify">
         <strong>Dearest Delegates,</strong>
         <br />
         <br />
-        It is with immense pride and honor that I welcome you all to the inaugural
-        National Conference of <strong>MAHE Model United Nations</strong>, taking
-        place in <strong>August 2025</strong>. This conference marks a monumental
-        milestone in our journey—what began as a vision has now become a reality,
-        with hundreds of delegates from across the country coming together to
-        engage in rigorous debate, diplomacy, and collaboration. Leading a
-        Secretariat and Organizing Committee of over 150 dedicated individuals, we
-        are committed to delivering an unparalleled MUN experience, setting a new
-        benchmark for excellence.
+        It is with immense pride and honor that I welcome you all to the
+        inaugural National Conference of{" "}
+        <strong>MAHE Model United Nations</strong>, taking place in{" "}
+        <strong>August 2025</strong>. This conference marks a monumental
+        milestone in our journey—what began as a vision has now become a
+        reality, with hundreds of delegates from across the country coming
+        together to engage in rigorous debate, diplomacy, and collaboration.
+        Leading a Secretariat and Organizing Committee of over 150 dedicated
+        individuals, we are committed to delivering an unparalleled MUN
+        experience, setting a new benchmark for excellence.
         <br />
         <br />
         My name is <strong>Pedaballe Sashreek Reddy</strong>, and I have the
@@ -53,11 +48,11 @@ const LetterSectionGenSec = () => (
         <br />
         <br />
         With <strong>15 dynamic committees</strong> designed to challenge and
-        inspire, this conference is set to be nothing short of remarkable. We aim
-        to foster a space where critical thinking meets diplomacy, where
-        innovative solutions are born, and where lifelong friendships are forged.
-        One of my friends from the MUN circuit once shared a simple yet profound
-        sentiment:{" "}
+        inspire, this conference is set to be nothing short of remarkable. We
+        aim to foster a space where critical thinking meets diplomacy, where
+        innovative solutions are born, and where lifelong friendships are
+        forged. One of my friends from the MUN circuit once shared a simple yet
+        profound sentiment:{" "}
         <em>
           "Learn one new thing and make one new friend by the end of this
           conference."
@@ -66,8 +61,8 @@ const LetterSectionGenSec = () => (
         philosophy.
         <br />
         <br />
-        Our mission at MAHE MUN is not just to host a conference but to create an
-        experience—one that leaves every delegate more confident, more
+        Our mission at MAHE MUN is not just to host a conference but to create
+        an experience—one that leaves every delegate more confident, more
         knowledgeable, and more inspired than when they arrived. I eagerly await
         the spirited discussions, the groundbreaking resolutions, and the bonds
         that will be built over the course of these intense yet rewarding days.
@@ -101,43 +96,75 @@ const LetterSectionGenSec = () => (
   </div>
 );
 
-
 const LetterSection = () => (
   <div className="relative min-h-screen">
-  
-    <div
-      className="absolute inset-0 bg-[url('/riyamob.jpg')] sm:bg-[url('/riya.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%] bg-center opacity-80"
-    ></div>
+    <div className="absolute inset-0 bg-[url('/riyamob.jpg')] sm:bg-[url('/riya.jpg')] bg-cover rounded-4xl sm:rounded-t-[7%] bg-center opacity-80"></div>
     <div className="absolute inset-0 bg-gray-200 opacity-75 rounded-4xl sm:rounded-t-[7%] "></div>
-   
+
     <div className="relative z-10 px-6 md:px-12 w-full max-w-6xl mx-auto">
-      
       <WavyText
         className="mt-8 text-[22px] sm:text-4xl md:text-6xl lg:text-[60px] font-medium text-center md:text-left"
         text="Letter from the President"
       />
 
-     
-      <p style={{ fontFamily: 'Inter, sans-serif' }}  className=" mt-6 text-gray-700 text-sm font-semibold text-justify">
+      <p
+        style={{ fontFamily: "Inter, sans-serif" }}
+        className=" mt-6 text-gray-700 text-sm font-semibold text-justify"
+      >
         <strong>Esteemed Delegates,</strong>
         <br />
         <br />
-        Every great movement begins with an idea, a vision bold enough to challenge the status quo. MAHE Model United Nations 2025 is not just a conference—it is a powerhouse of intellect, diplomacy, and leadership. This August, as we bring together some of the sharpest minds from across the nation, we are not just debating policies; we are shaping the future of global discourse.
+        Every great movement begins with an idea, a vision bold enough to
+        challenge the status quo. MAHE Model United Nations 2025 is not just a
+        conference—it is a powerhouse of intellect, diplomacy, and leadership.
+        This August, as we bring together some of the sharpest minds from across
+        the nation, we are not just debating policies; we are shaping the future
+        of global discourse.
+        <br />
+        <br />I am <strong>Riya Singh</strong>, and I have the privilege of
+        serving as your President for this landmark edition of MAHE MUN. My
+        journey in public speaking, strategic leadership, and multifaceted
+        management has taught me one fundamental truth: Excellence is never
+        accidental—it is engineered. And this conference is a testament to that
+        principle.
         <br />
         <br />
-        I am <strong>Riya Singh</strong>, and I have the privilege of serving as your President for this landmark edition of MAHE MUN. My journey in public speaking, strategic leadership, and multifaceted management has taught me one fundamental truth: Excellence is never accidental—it is engineered. And this conference is a testament to that principle.
+        Behind this grand endeavor stands a formidable team of individuals who
+        bring their passion, dedication, and expertise to every aspect of this
+        conference. The Board of Directors provides the strategic vision that
+        drives MAHE MUN forward, while our 40+ Executive Board Members work
+        relentlessly to ensure that every committee delivers the intensity and
+        intellectual rigor that defines this conference. Alongside them, a 30+
+        member Secretariat has spent countless hours shaping an event that goes
+        beyond just debate—it is a true simulation of global diplomacy. And at
+        the heart of it all, our 80+ Organizing Committee Members work
+        tirelessly behind the scenes to make sure that every detail is executed
+        with precision. Together, we are not just hosting an event; we are
+        redefining what an MUN can be.
         <br />
         <br />
-        Behind this grand endeavor stands a formidable team of individuals who bring their passion, dedication, and expertise to every aspect of this conference. The Board of Directors provides the strategic vision that drives MAHE MUN forward, while our 40+ Executive Board Members work relentlessly to ensure that every committee delivers the intensity and intellectual rigor that defines this conference. Alongside them, a 30+ member Secretariat has spent countless hours shaping an event that goes beyond just debate—it is a true simulation of global diplomacy. And at the heart of it all, our 80+ Organizing Committee Members work tirelessly behind the scenes to make sure that every detail is executed with precision. Together, we are not just hosting an event; we are redefining what an MUN can be.
+        With <strong>15 dynamic committees</strong>, this conference is designed
+        to push boundaries, provoke thought, and create an environment where
+        diplomacy thrives. Whether you find yourself negotiating peace, tackling
+        pressing global crises, or drafting policies that could reshape the
+        future, you will be stepping into a space that demands nothing less than
+        excellence. Expect thought-provoking discussions, diplomatic
+        breakthroughs, and resolutions that go beyond the ordinary. Whether you
+        are here to challenge, collaborate, or champion a cause, one thing is
+        certain—you will leave this conference transformed.
         <br />
         <br />
-        With <strong>15 dynamic committees</strong>, this conference is designed to push boundaries, provoke thought, and create an environment where diplomacy thrives. Whether you find yourself negotiating peace, tackling pressing global crises, or drafting policies that could reshape the future, you will be stepping into a space that demands nothing less than excellence. Expect thought-provoking discussions, diplomatic breakthroughs, and resolutions that go beyond the ordinary. Whether you are here to challenge, collaborate, or champion a cause, one thing is certain—you will leave this conference transformed.
+        As we prepare to welcome you to Manipal, I leave you with one thought:
+        Leadership is not about speaking the loudest; it is about making the
+        most impact. So step forward, engage fearlessly, and let this conference
+        be the stage where your ideas take flight.
         <br />
         <br />
-        As we prepare to welcome you to Manipal, I leave you with one thought: Leadership is not about speaking the loudest; it is about making the most impact. So step forward, engage fearlessly, and let this conference be the stage where your ideas take flight.
-        <br />
-        <br />
-        The Secretariat and I stand ready to make this an unforgettable experience for you. Should you have any queries or need any assistance, please do not hesitate to reach out. I look forward to seeing each and every one of you bring your passion, intellect, and diplomatic prowess to MAHE MUN 2025.
+        The Secretariat and I stand ready to make this an unforgettable
+        experience for you. Should you have any queries or need any assistance,
+        please do not hesitate to reach out. I look forward to seeing each and
+        every one of you bring your passion, intellect, and diplomatic prowess
+        to MAHE MUN 2025.
         <br />
         <br />
         <strong>With ambition and anticipation,</strong>
@@ -159,7 +186,6 @@ const LetterSection = () => (
   </div>
 );
 
-
 // export default LetterSection;
 
 const FullImage = ({ src }) => {
@@ -170,12 +196,12 @@ const FullImage = ({ src }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]); // Zoom from 1x to 1.2x
 
   return (
-    <div className="w-full h-screen overflow-hidden rounded-4xl sm:rounded-t-[7%]">
+    <div className="w-full h-screen overflow-hidden rounded-t-4xl sm:rounded-t-[7%]">
       <motion.img
         src={src}
         alt="Full View"
         className="w-full h-full object-cover"
-        style={{ scale }} 
+        style={{ scale }}
       />
     </div>
   );
@@ -185,15 +211,19 @@ const DelegatePage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-[70vh]  bg-[#E5F3F1] rounded-t-4xl sm:rounded-t-[7%] text-black">
       {/* Top Text */}
-      <WavyText  className="text-md sm:text-lg tracking-widest font-semibold"
+      <WavyText
+        className="text-md sm:text-lg tracking-widest font-semibold"
         text="WANNA BECOME A DELEGATE"
       />
 
       {/* Main Heading */}
-      <WavyText className="text-5xl sm:text-8xl font-bold text-center leading-none mt-4"
-      text="LET'S WORK"/>
-      
-      <WavyText className="text-5xl sm:text-8xl font-bold text-center leading-none"
+      <WavyText
+        className="text-5xl sm:text-8xl font-bold text-center leading-none mt-4"
+        text="LET'S WORK"
+      />
+
+      <WavyText
+        className="text-5xl sm:text-8xl font-bold text-center leading-none"
         text="TOGETHER"
       />
 
@@ -208,7 +238,6 @@ const DelegatePage = () => {
     </div>
   );
 };
-
 
 const sections = [
   {
@@ -240,13 +269,9 @@ const sections = [
   {
     id: 6,
     content: <FullImage src="/mun.jpg" />,
-    classname: "rounded-4xl sm:rounded-t-[7%] h-auto md:h-screen",
+    classname: "rounded-t-4xl sm:rounded-t-[7%] h-auto md:h-screen",
   },
-  
-
 ];
-
-
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -261,12 +286,36 @@ const Home = () => {
 
   // Define transformation values based on screen size
   const homeY = useTransform(scrollYProgress, [0, 0.1], ["0vh", "0vh"]);
-  const letterY = useTransform(scrollYProgress, [0.1, 0.25], isMobile ? ["120vh", "-80vh"] : ["100vh", "-20vh"]);
-  const letterY2 = useTransform(scrollYProgress, [0.25, 0.4], isMobile ? ["120vh", "-62vh"] : ["100vh", "-20vh"]);
-  const confY = useTransform(scrollYProgress, [0.4, 0.55], isMobile ? ["140vh", "-125vh"] : ["100vh", "-50vh"]);
-  const statsY = useTransform(scrollYProgress, [0.45, 0.8], isMobile ? ["140vh", "18vh"] : ["100vh", "35vh"]);
-  const imageY = useTransform(scrollYProgress, [0.7, 1], isMobile ? ["140vh", "39vh"] : ["100vh", "45vh"]);
-  const delegateY = useTransform(scrollYProgress, [0.8, 0.95], isMobile ? ["120vh", "50vh"] : ["80vh", "45vh"]);
+  const letterY = useTransform(
+    scrollYProgress,
+    [0.01, 0.25],
+    isMobile ? ["120vh", "-95vh"] : ["100vh", "-20vh"]
+  );
+  const letterY2 = useTransform(
+    scrollYProgress,
+    [0.25, 0.4],
+    isMobile ? ["120vh", "-82vh"] : ["100vh", "-20vh"]
+  );
+  const confY = useTransform(
+    scrollYProgress,
+    [0.4, 0.55],
+    isMobile ? ["140vh", "-105vh"] : ["100vh", "-50vh"]
+  );
+  const statsY = useTransform(
+    scrollYProgress,
+    [0.45, 0.8],
+    isMobile ? ["140vh", "-1vh"] : ["100vh", "35vh"]
+  );
+  const imageY = useTransform(
+    scrollYProgress,
+    [0.39, 1],
+    isMobile ? ["140vh", "39vh"] : ["100vh", "45vh"]
+  );
+  const delegateY = useTransform(
+    scrollYProgress,
+    [0.8, 0.95],
+    isMobile ? ["120vh", "50vh"] : ["80vh", "45vh"]
+  );
 
   return (
     <div className="min-h-screen max-w-full bg-gradient-to-b from-gray-50 to-white">
@@ -316,6 +365,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;

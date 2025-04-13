@@ -1,20 +1,19 @@
 @import "tailwindcss";
 @font-face {
-    font-family: "FlatterySerif";
-    src: url("/src/fonts/FlatterySerif.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-body {
-    font-family: "FlatterySerif", serif;
-  }
+  font-family: "FlatterySerif";
+  src: url("/src/fonts/FlatterySerif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
 .scrollbar-hide {
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: thin; /* Make it very thin instead of none */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: thin; /* Make it very thin instead of none */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    width: 0px; /* Instead of display: none, set width to 0 */
-    height: 0px;
+  width: 0px; /* Instead of display: none, set width to 0 */
+  height: 0px;
 }
-  
