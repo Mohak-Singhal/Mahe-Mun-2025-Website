@@ -19,7 +19,7 @@ const teamMembers = [
   { name: "Shweta Banerjee", role: "Director of Collaborations & Public Relations", img: "/team_mem_pics/collab_public.jpg", linkedin: "https://www.linkedin.com/in/shweta-banerjee-130b89225/", email: "shweta.mcodsmpl2022@learner.manipal.edu" },
   { name: "Ekansh Bansal", role: "Director of Finance & Technology", img: "/team_mem_pics/finance_tech.jpg", linkedin: "https://www.linkedin.com/in/ekansh-bansal-100848287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", email: "ekansh.mitmpl2023@learner.manipal.edu" },
   { name: "Devansh Tandon", role: "Director of Management", img: "/team_mem_pics/management.jpg", linkedin: "https://www.linkedin.com/in/devanshtandon2003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", email: "devansh.tandon1@learner.manipal.edu" },
-  { name: "Mahalakshmi Venkataraman", role: "Director of Design", img: "/team_mem_pics/design.jpg", linkedin: "http://www.linkedin.com/in/mahasmy", email: "http://www.linkedin.com/in/mahasmy" }
+  { name: "Mahalaksmy Venkataraman", role: "Director of Design", img: "/team_mem_pics/design.jpg", linkedin: "http://www.linkedin.com/in/mahasmy", email: "mahalakshmy.msapmpl2022@learner.manipal.edu" }
 ];
 
 const Team = () => {
