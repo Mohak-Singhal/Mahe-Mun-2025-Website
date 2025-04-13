@@ -67,7 +67,7 @@ const LoadingScreen = () => {
         <img
           src="/logo2.png"
           alt="Logo"
-          className="absolute w-26 h-26 object-contain z-10"
+          className="absolute w-35 h-35 object-contain z-10"
         />
       </motion.div>
 

@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #f2eded;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('/hero-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Introduction Section */
+.introduction-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.introduction-section .content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.introduction-section .content h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.introduction-section .content p {
+    font-size: 18px;
+    color: #555;
+}
+
+.introduction-section .image {
+    flex: 1;
+}
+
+.introduction-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Mission & Vision */
+.mission-vision-section {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+    color: white;
+}
+
+.values {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.value {
+    flex: 1;
+    max-width: 250px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.value i {
+    font-size: 40px;
+}
+
+.value h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Committees Section */
+.committees-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.committees {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.committee {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.committee img {
+    width: 100px;
+    height: 100px;
+}
+
+.committee h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Gallery */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #eee;
+}
+
+.gallery-item {
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #3b5998;
+    color: white;
+}
+.cta-section h2 {
+    font-size: 36px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #3b5998;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #8b9dc3;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .introduction-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .introduction-section .content {
+        padding-right: 0;
+    }
+
+    .values {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .committees {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        padding: 5px;
+    }
+}

@@ -1,16 +1,15 @@
 :root {
-  --bg-cream: #F7EBDB;          
-  --text-color: #333333;         
-  --accent-gold: #BFA06B;         
-  --accent-gold-dark: #A78B5A;      
-  --border-gray: #CCCCCC;         
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --bg-cream: #FFFFFF; 
+  --text-color: #222222; 
+  --accent-gold: #666666;
+  --accent-gold-dark: #444444; 
+  --border-gray: #BBBBBB; 
+  --shadow-color: rgba(0, 0, 0, 0.15); 
 
-  --flip-front-start: #FFE4C4;  
-  --flip-front-end:   #FFDAB9;  
-  --flip-back-start:  #FFDAB9;  
-  --flip-back-end:    #FFC299;    
-
+  --flip-front-start: #DDDDDD;  
+  --flip-front-end:   #BBBBBB;  
+  --flip-back-start:  #BBBBBB;  
+  --flip-back-end:    #999999;    
 }
 
 /* Overall Page */
@@ -18,7 +17,7 @@
   background: var(--bg-cream);
   color: var(--text-color);
   min-height: 100vh;
-  padding: 40px 80px;
+  padding: clamp(20px, 5vw, 40px) clamp(10px, 4vw, 80px);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -30,16 +29,22 @@
   }
 }
 
+@media (max-width: 480px) {
+  .aug-conference-page {
+    padding: 20px 15px;
+  }
+}
+
 /* conference details*/
 .conference-details {
   position: relative;
   text-align: center;
-  margin-bottom: 40px;
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #EEE4D5, var(--bg-cream));
+  margin-bottom: clamp(20px, 5vw, 40px);
+  padding: clamp(20px, 4vw, 30px) clamp(10px, 3vw, 20px);
+  background: linear-gradient(135deg, #F5F5F5, var(--bg-cream));
   border: 3px dashed var(--accent-gold);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(72, 21, 126, 0.3);
+  box-shadow: 0 4px 10px var(--shadow-color);
   overflow: hidden;
 }
 
@@ -52,7 +57,7 @@
   height: 200%;
   background: conic-gradient(from 0deg, var(--accent-gold), var(--accent-gold-dark), var(--accent-gold));
   animation: spin 10s linear infinite;
-  opacity: 0.1;
+  opacity: 0.25;
   z-index: 0;
 }
 
@@ -67,22 +72,22 @@
 }
 
 .conference-details h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: clamp(5px, 2vw, 10px);
   color: var(--accent-gold);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 0.1vw, 1px);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .conference-details p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   margin: 5px 0;
   line-height: 1.5;
 }
 
 .more-details {
-  margin-top: 20px;
+  margin-top: clamp(10px, 3vw, 20px);
   font-style: italic;
   color: var(--text-color);
 }
@@ -90,14 +95,14 @@
 /* search */
 .search-section {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 4vw, 30px);
 }
 
 .search-input {
-  width: 80%;
+  width: clamp(200px, 80%, 500px);
   max-width: 500px;
-  padding: 10px 15px;
-  font-size: 1rem;
+  padding: clamp(8px, 2vw, 10px) clamp(10px, 3vw, 15px);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   border: 2px solid var(--border-gray);
   border-radius: 25px;
   outline: none;
@@ -110,28 +115,28 @@
 
 /* committees */
 .committees-section {
-  margin-top: 40px;
+  margin-top: clamp(20px, 5vw, 40px);
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 5vw, 40px);
   color: var(--accent-gold);
   text-transform: uppercase;
   border-bottom: 3px solid var(--border-gray);
-  display: inline-block;
-  padding-bottom: 5px;
+  display: block;
+  padding-bottom: clamp(3px, 1vw, 5px);
 }
 
 .tier-section {
-  margin-bottom: 60px;
+  margin-bottom: clamp(30px, 6vw, 60px);
   transition: opacity 0.3s ease;
 }
 
 .tier-title {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  margin-bottom: clamp(10px, 3vw, 20px);
   color: var(--text-color);
   text-align: center;
   text-transform: uppercase;
@@ -140,8 +145,14 @@
 .commencees-grid,
 .committees-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(15px, 4vw, 30px);
+}
+
+@media (min-width: 769px) {
+  .committees-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -154,7 +165,8 @@
 .committee-card {
   perspective: 1000px;
   cursor: pointer;
-  height: 250px; 
+  min-height: clamp(220px, 50vh, 250px);
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -180,7 +192,7 @@
   border-radius: 16px;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 20px;
+  padding: clamp(10px, 3vw, 20px);
 }
 
 /* front face */
@@ -196,6 +208,13 @@
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .committee-front-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .committee-logo-container {
   flex: 0 0 40%;
   display: flex;
@@ -204,7 +223,7 @@
 }
 
 .committee-logo {
-  max-width: 240px;
+  max-width: clamp(120px, 100%, 240px);
   width: 100%;
   height: auto;
   margin: 0;
@@ -216,8 +235,16 @@
   text-align: left;
 }
 
+@media (max-width: 480px) {
+  .committee-text-container {
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+
 .committee-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
   margin: 0 0 5px 0;
   color: var(--text-color);
   font-weight: bold;
@@ -225,14 +252,14 @@
 }
 
 .committee-fullform {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   color: #5D4037;
   font-style: italic;
   margin: 0;
 }
 
 .committee-subinfo {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: #5D4037;  
   font-style: italic;
   margin: 0;
@@ -243,31 +270,31 @@
 .flip-card-back {
   background: linear-gradient(135deg, var(--flip-back-start), var(--flip-back-end));
   transform: rotateY(180deg);
-  padding-top: 20px;
+  padding-top: clamp(15px, 3vw, 20px);
   color: var(--text-color);
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
   line-height: 1.4;
   overflow-y: auto;
 }
 
 .flip-card-back p {
-  margin: 8px 0;
+  margin: clamp(5px, 2vw, 8px) 0;
 }
 
 .committee-eb {
-  margin-top: 10px;
+  margin-top: clamp(5px, 2vw, 10px);
 }
 
 .committee-eb-member {
-  margin-top: 5px;
+  margin-top: clamp(3px, 1vw, 5px);
 }
 
 /* background guide button */
 .background-guide-btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 15px;
-  font-size: 1rem;
+  margin-top: clamp(8px, 2vw, 12px);
+  padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: bold;
   color: #fff;
   background-color: var(--accent-gold);
@@ -282,10 +309,14 @@
 
 .scroll-to-top {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  padding: 10px 15px;
-  font-size: 1rem;
+  right: clamp(15px, 4vw, 30px);
+  bottom: clamp(15px, 4vw, 30px);
+  width: clamp(40px, 10vw, 50px);
+  height: clamp(40px, 10vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   background-color: var(--accent-gold);
   color: #fff;
   border: none;
@@ -298,4 +329,83 @@
 
 .scroll-to-top:hover {
   background-color: var(--accent-gold-dark);
+}
+
+/*media queries */
+@media (max-width: 480px) {
+  .aug-conference-page {
+    padding: 2rem 4vw;
+  }
+  .conference-details {
+    padding: 1.5rem 1rem; 
+  }
+  .conference-details h1 {
+    font-size: clamp(1.2rem, 5vw, 2.5rem); 
+  }
+  .conference-details p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem); 
+  }
+  .section-title {
+    text-align: center; 
+  }
+  .tier-title {
+    font-size: clamp(1rem, 4vw, 1.4rem); 
+    margin-bottom: 15px;               
+  }
+  .committee-card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aug-conference-page {
+    padding: 1.5rem 3vw;
+  }
+  .committee-logo {
+    max-width: 150px;
+  }
+  .committee-name {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 481px) and (max-width: 768px) {
+  .committee-card {
+    min-height: 230px;
+  }
+  .committee-logo {
+    max-width: clamp(100px, 90%, 200px);
+  }
+}
+
+/* fade-in animation */
+.fade-animation {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-animation.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-animation.delay-2 {
+  animation-delay: 1.5s;
+}
+
+.fade-animation.delay-3 {
+  animation-delay: 2.5s;
+}
+
+.fade-animation.delay-4 {
+  animation-delay: 3.5s;
 }

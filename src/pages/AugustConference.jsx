@@ -330,19 +330,19 @@ const AugustConference = () => {
   return (
     <>
       <Navbar classname="text-white bg-black" />
-      <div className="aug-conference-page">
+      <div className="aug-conference-page mt-26">
         <section className="conference-details">
           <h1>{conferenceDetails.name}</h1>
-          <p>
+          <p className="fade-animation delay-1">
             <strong>Venue:</strong> {conferenceDetails.venue}
           </p>
-          <p>
+          <p className="fade-animation delay-2">
             <strong>Dates:</strong> {conferenceDetails.dates}
           </p>
-          <p>
+          <p className="fade-animation delay-3">
             <strong>Cash Pool:</strong> {conferenceDetails.cashPool}
           </p>
-          <p className="more-details">{conferenceDetails.moreDetails}</p>
+          <p className="fade-animation delay-4 more-details">{conferenceDetails.moreDetails}</p>
         </section>
 
         <section className="search-section">
