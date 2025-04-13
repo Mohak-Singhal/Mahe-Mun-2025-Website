@@ -63,12 +63,11 @@ const teamMembers = [
     name: "Devansh Tandon",
     role: "Director of Management",
     img: "/team_mem_pics/management.jpg",
-    linkedin:
-      "https://www.linkedin.com/in/devanshtandon2003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    linkedin:"https://www.linkedin.com/in/devanshtandon2003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     email: "devansh.tandon1@learner.manipal.edu",
   },
   {
-    name: "Mahalakshmi Venkataraman",
+    name: "Mahalaksmy Venkataraman",
     role: "Director of Design",
     img: "/team_mem_pics/design.jpg",
     linkedin: "http://www.linkedin.com/in/mahasmy",
@@ -120,9 +119,10 @@ const Team = () => {
   const toggleShowMembers = () => {
     setShowAllMembers(!showAllMembers);
   };
-  const shouldShowButton = typeof window !== 'undefined' && 
-                         window.innerWidth <= 768 && 
-                         otherTeams.length > initialVisibleMembers;
+  const shouldShowButton =
+    typeof window !== "undefined" &&
+    window.innerWidth <= 768 &&
+    otherTeams.length > initialVisibleMembers;
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -266,37 +266,46 @@ const Team = () => {
         </div>
 
         {/* Other Team Members Section */}
-      <div className="team-list-section">
-        <h2 className="board_heading font-['Norwester']">Secretariat</h2>
-        <div className={`members-grid ${showAllMembers ? 'show-all' : ''}`}>
-          {/* Always show all members on desktop, limited on mobile */}
-          {(typeof window !== 'undefined' && window.innerWidth > 768) ? (
-            otherTeams.map((member, index) => (
-              <div key={index} className="member-item">
-                <h3 className="member-name font-['Inter']">{member.name}</h3>
-                <p className="member-role font-['Inter']">{member.role}</p>
-              </div>
-            ))
-          ) : (
-            otherTeams
-              .slice(0, showAllMembers ? otherTeams.length : initialVisibleMembers)
-              .map((member, index) => (
-                <div key={index} className="member-item">
-                  <h3 className="member-name font-['Inter']">{member.name}</h3>
-                  <p className="member-role font-['Inter']">{member.role}</p>
-                </div>
-              ))
+        <div className="team-list-section">
+          <h2 className="board_heading font-['Norwester']">Secretariat</h2>
+          <div className={`members-grid ${showAllMembers ? "show-all" : ""}`}>
+            {/* Always show all members on desktop, limited on mobile */}
+            {typeof window !== "undefined" && window.innerWidth > 768
+              ? otherTeams.map((member, index) => (
+                  <div key={index} className="member-item">
+                    <h3 className="member-name font-['Inter']">
+                      {member.name}
+                    </h3>
+                    <p className="member-role font-['Inter']">{member.role}</p>
+                  </div>
+                ))
+              : otherTeams
+                  .slice(
+                    0,
+                    showAllMembers ? otherTeams.length : initialVisibleMembers
+                  )
+                  .map((member, index) => (
+                    <div key={index} className="member-item">
+                      <h3 className="member-name font-['Inter']">
+                        {member.name}
+                      </h3>
+                      <p className="member-role font-['Inter']">
+                        {member.role}
+                      </p>
+                    </div>
+                  ))}
+          </div>
+
+          {shouldShowButton && (
+            <div className="mobile-only">
+              <button onClick={toggleShowMembers} className="show-more-button">
+                {showAllMembers
+                  ? "Show Less"
+                  : `Show More (+${otherTeams.length - initialVisibleMembers})`}
+              </button>
+            </div>
           )}
         </div>
-        
-        {shouldShowButton && (
-          <div className="mobile-only">
-            <button onClick={toggleShowMembers} className="show-more-button">
-              {showAllMembers ? 'Show Less' : `Show More (+${otherTeams.length - initialVisibleMembers})`}
-            </button>
-          </div>
-        )}
-      </div>
 
         {/* Web Development Team Section */}
         <div className="team-list-section">
