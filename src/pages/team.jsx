@@ -127,7 +127,7 @@ const Team = () => {
                 <p>{member.role}</p>
                 <div className="icons-row">
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <img src="public\team_mem_pics\linkdin.png" alt="LinkedIn" className="icon-img" />
+                    <img src="/team_mem_pics/linkdin.png" alt="LinkedIn" className="icon-img" />
                   </a>
                   <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer">
                     <Mail size={21} />
