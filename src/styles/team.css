@@ -314,5 +314,164 @@ h2 {
   .team-member .image-container a.linkedin-icon {
     display: none; 
   }
-
+  /* Team List Sections */
+/* Team List Sections - Compact Version */
+.team-list-section {
+    margin: 1.5rem 0; /* Reduced from 3rem */
+  }
   
+  /* Centered Member - Compact */
+  .centered-member {
+    text-align: center;
+    margin: 1rem auto 1.5rem; /* Reduced from 2rem auto 3rem */
+    max-width: 300px;
+    padding: 1rem;
+  }
+  
+  /* Web Dev Members - Desktop Compact */
+  .webdev-members-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem auto; /* Reduced spacing */
+    max-width: 900px;
+    width: 90%;
+    padding: 0 1rem; /* Reduced padding */
+  }
+  
+  .webdev-member {
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    padding: 0 0.5rem; /* Reduced padding */
+  }
+  
+  .webdev-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.2rem 0; /* Reduced margin */
+  }
+  
+  /* Other Team Members Grid - Compact */
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More compact */
+    gap: 0.8rem; /* Reduced from 1rem */
+    margin-top: 1rem; /* Reduced from 1.5rem */
+  }
+  
+  .member-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.8rem; /* Reduced from 1.2rem */
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .member-name {
+    font-size: 1rem; /* Slightly smaller */
+    font-weight: 500;
+    margin-bottom: 0.2rem; /* Reduced */
+    color: #000000;
+  }
+  
+  .member-role {
+    font-size: 0.85rem; /* Slightly smaller */
+    color: #2C2D2D;
+    margin: 0;
+  }
+  
+  /* Mobile Compact Styles */
+  @media (max-width: 768px) {
+    .team-list-section {
+      margin: 1rem 0; /* More compact on mobile */
+    }
+    
+    .centered-member {
+      margin: 0.8rem auto 1rem; /* Tighter spacing */
+      padding: 0;
+    }
+    
+    .webdev-members-container {
+      flex-direction: column;
+      gap: 0.5rem; /* Very tight vertical spacing */
+      padding: 0 0.5rem;
+      margin: 0.5rem auto;
+    }
+    
+    .webdev-member {
+      padding: 0; /* Very compact */
+      margin: 0;
+      
+    }
+    
+    .members-grid {
+      grid-template-columns: 1fr; /* Single column */
+      gap: 0.5rem; /* Tight spacing */
+    }
+    
+    .member-item {
+      padding: 0.6rem; /* More compact */
+    }
+  }
+  
+  /* Keep all other existing styles unchanged */
+/* Show More/Less Button Styles - Mobile Only */
+.mobile-only {
+    display: none;
+  }
+  
+  .show-more-button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+    background: #000000;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .show-more-button:hover {
+    background: #000000;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .mobile-only {
+      display: block;
+    }
+    
+    /* Only apply the show/hide functionality on mobile */
+    .members-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    
+    .members-grid:not(.show-all) .member-item:nth-child(n+7) {
+      display: none;
+    }
+  }
+  
+  /* Desktop Styles - Always show all members */
+  @media (min-width: 769px) {
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .members-grid .member-item {
+      display: flex !important; /* Force show all items on desktop */
+    }
+  }
