@@ -79,7 +79,7 @@ const teamMembers = [
 const webDevTeam = [
   { name: "Mohak Singhal", role: "USG Web Dev" },
   { name: "Krishna Anand" },
-  { name: "Aaditya" },
+  { name: "Aaditya Jain" },
   { name: "Twinkle Tomar" },
   { name: "Hemanth Rajvardhan" },
 ];
