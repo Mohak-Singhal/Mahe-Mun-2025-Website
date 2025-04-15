@@ -89,7 +89,7 @@ const Navbar = ({ classname }) => {
         {/* Register Button */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            to="/register"
+            to="https://forms.gle/iJQZPwbrVy6AjPdG6"
             className="hidden md:flex items-center bg-white text-black px-6 py-2.5 rounded-full font-semibold transition-all hover:bg-gray-100 shadow-md hover:shadow-lg"
           >
             REGISTER
@@ -180,7 +180,7 @@ const Navbar = ({ classname }) => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  to="/register"
+                  to="https://forms.gle/iJQZPwbrVy6AjPdG6"
                   className="bg-white text-black px-8 py-3 rounded-full font-semibold transition-all hover:bg-gray-100 shadow-lg hover:shadow-xl"
                   onClick={() => setIsOpen(false)}
                 >
