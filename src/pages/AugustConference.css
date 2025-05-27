@@ -112,11 +112,34 @@
 .search-input:focus {
   border-color: var(--accent-gold);
 }
+.allocation-container {
+  margin-top: clamp(16px, 3vw, 24px);
+  text-align: center;
+}
+
+.allocation-button {
+  display: inline-block;
+  background: linear-gradient(105deg, var(--accent-gold), var(--accent-gold-dark));
+  color: white;
+  padding: clamp(10px, 2vw, 14px) clamp(20px, 5vw, 30px);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 500;
+  border: none;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.allocation-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
 /* committees */
-.committees-section {
-  margin-top: clamp(20px, 5vw, 40px);
-}
+/* .committees-section {
+  margin-top: clamp(5px, 5vw, 0px);
+} */
 
 .section-title {
   font-size: clamp(1.5rem, 5vw, 2.2rem);

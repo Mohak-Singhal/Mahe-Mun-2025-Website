@@ -400,6 +400,16 @@ const AugustConference = () => {
             <strong>Cash Pool:</strong> {conferenceDetails.cashPool}
           </p>
           <p className="fade-animation delay-4 more-details">{conferenceDetails.moreDetails}</p>
+          <div className="allocation-container">
+  <a
+    href="https://docs.google.com/spreadsheets/d/16m_K0stTnKVW9QLtnMmKtLE_A_wyk-ZpLrKgFnfk3WQ/edit?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="allocation-button font-['Inter']"
+  >
+    📄 Allocation Matrix 
+  </a>
+</div>
         </section>
 
         <section className="search-section">
@@ -413,7 +423,7 @@ const AugustConference = () => {
         </section>
 
         <section className="committees-section">
-          <h2 className="font-['Norwester'] section-title">Committees</h2>
+          <h1 className="font-['Norwester'] section-title">Committees</h1>
           {filteredData.map((tierData, index) => (
             <div key={index} className="tier-section">
               <h3 className="font-['Norwester'] tier-title">{tierData.tier}</h3>
