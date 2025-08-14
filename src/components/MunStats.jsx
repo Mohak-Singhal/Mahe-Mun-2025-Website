@@ -3,10 +3,10 @@ import { motion, useInView } from "framer-motion";
 import { WavyText } from "./textanimation";
 
 const stats = [
-  { targetNumber: 250, label: "Delegates" },
-  { targetNumber: 25, label: "Executive Board Members" },
-  { targetNumber: 50, label: "Organizers" },
-  { targetNumber: 40, label: "Volunteers" },
+  { targetNumber: 700, label: "Delegates" },
+  { targetNumber: 60, label: "Executive Board Members" },
+  { targetNumber: 100, label: "Organizers" },
+  { targetNumber: 50, label: "Volunteers" },
 ];
 
 const MunStats = () => {

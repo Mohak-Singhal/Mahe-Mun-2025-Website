@@ -124,7 +124,7 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4 text-gray-400">
-              <a href="https://www.linkedin.com/in/oiac-mahe-93b338254/" className="text-xl hover:text-white transition-colors duration-200">
+              <a href="https://www.linkedin.com/in/oiac-mahe-93b338254/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-white transition-colors duration-200">
                   <FaLinkedin />
                 </a>
               <a href="https://www.instagram.com/oiac_mahe/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-white transition-colors duration-200">

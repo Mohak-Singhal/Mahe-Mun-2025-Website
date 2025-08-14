@@ -28,7 +28,7 @@ const committeesData = [
           { designation: 'Rapporteur', name: 'Taniha Alpha Fernandes' },
         ],
         label: 'Zero Hour',
-        backgroundGuide: '/pdfs/whsr.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/18E1Q5XksXFUtoxxGQcNC4WyqDFPDwJxc/view?usp=sharing',
         subInfo: 'Crisis Committee, National Security',
         frontImage: '/committees_images/whsr_front.jpg',
         backImage: '/committees_images/whsr_back.jpg',
@@ -45,7 +45,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Harshvardan Kalra' },
           { designation: 'Rapporteur', name: 'Gouri Naik' },
         ],
-        backgroundGuide: '/pdfs/interpol.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1RyiQL2Gi1KYQqrWyMTXQA6SCO4lmut1a/view?usp=sharing',
         subInfo: 'General Committee, Law Enforcement',
         frontImage: '/committees_images/interpol_front.jpg',
         backImage: '/committees_images/interpol_back.jpg',
@@ -60,7 +60,7 @@ const committeesData = [
           { designation: 'Chairperson', name: 'Parth Vij' },
           { designation: 'Vice-Chairperson', name: 'Alpesh Abhijit Chowdhury' },
         ],
-        backgroundGuide: '/pdfs/unsc.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1ZnZG8dgdVBRnRZ9QnYrTr-h9K-WqTkDt/view?usp=sharing',
         subInfo: 'General Committee, Security',
         frontImage: '/committees_images/unsc_front.jpg',
         backImage: '/committees_images/unsc_back.jpg',
@@ -76,7 +76,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Krish Gandhi' },
           { designation: 'Rapporteur', name: 'Varanasi Naga Akhil' },
         ],
-        backgroundGuide: '/pdfs/nato.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1PeQuSUMNPb8p1wGAtOlzQr51PPcRimkx/view?usp=sharing',
         subInfo: 'General Committee, Security & Defense',
         frontImage: '/committees_images/nato_front.jpg',
         backImage: '/committees_images/nato_back.jpg',
@@ -92,7 +92,7 @@ const committeesData = [
           { designation: 'Co-Chairperson', name: 'Advika Anand' },
           { designation: 'Rapporteur', name: 'Srilakshmi Badri Seshadri' },
         ],
-        backgroundGuide: '/pdfs/who.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1X7HAcZb0iC9v0cm-lCG6Z1F7U3KcwCX6/view?usp=sharing',
         subInfo: 'General-Crisis Hybrid Committee, Global Health & Emergency Response',
         frontImage: '/committees_images/who_front.jpg',
         backImage: '/committees_images/who_back.jpg',
@@ -112,7 +112,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Bedobrata Saikia' },
           { designation: 'Rapporteur', name: 'ShreeVatsank Gajjala' },
         ],
-        backgroundGuide: '/pdfs/ccc.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/13--NSgBOoYS8mERwRb1qkGAtHQD_ozcI/view?usp=sharing',
         subInfo: 'Crisis Committee, Historical-Political',
         frontImage: '/committees_images/ccc_front.jpg',
         backImage: '/committees_images/ccc_back.jpg',
@@ -128,7 +128,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Arsaanth Baskar' },
           { designation: 'Rapporteur', name: 'Shreyansh Giri' },
         ],
-        backgroundGuide: '/pdfs/ecofin.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/109acZMtxR7gsBfZP8rkd2TnlPZypH99E/view?usp=sharing',
         subInfo: 'General Committee, Economics & Finance',
         frontImage: '/committees_images/ecofin_front.jpg',
         backImage: '/committees_images/ecofin_back.jpg',
@@ -142,7 +142,7 @@ const committeesData = [
           { designation: 'Chairperson', name: 'Shaurya Kumar' },
           { designation: 'Vice-Chairperson', name: 'Ekansh Bansal' },
         ],
-        backgroundGuide: '/pdfs/ipm.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1sa3gjShKw7EyjYz9tSVEyI73_M3u3QfK/view?usp=sharing',
         subInfo: 'Press Committee, Journalism & Media',
         frontImage: '/committees_images/ipm_front.jpg',
         backImage: '/committees_images/ipm_back.jpg',
@@ -158,7 +158,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Goonj Rep' },
           { designation: 'Rapporteur', name: 'Goonj Rep' },
         ],
-        backgroundGuide: '/pdfs/lok_sabha.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1sktnXKpYFbpdIMHXx1Y5mPgLpqjxgYgO/view?usp=sharing',
         subInfo: 'Indian General Committee, Governance & Policy',
         frontImage: '/committees_images/ls_front.jpg',
         backImage: '/committees_images/ls_back.jpg',
@@ -174,7 +174,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Aadya Sinha' },
           { designation: 'Rapporteur', name: 'Anamay Tripathy' },
         ],
-        backgroundGuide: '/pdfs/unfccc.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1PHcYqowQFIXLUXFeGlx_Nw0Ntmn1d2h5/view?usp=sharing',
         subInfo: 'General Committee, Climate & Sustainability',
         frontImage: '/committees_images/unfccc_back.jpg',
         backImage: '/committees_images/unfccc_front.jpg',
@@ -196,7 +196,7 @@ const committeesData = [
           { designation: 'Rapporteur', name: 'Anushka Sarkar' },
         ],
         label: 'Case',
-        backgroundGuide: '/pdfs/icj.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1QDhTWFJZuXOxbS-1ZJnxJ3tOZR9xqzGC/view?usp=sharing',
         subInfo: 'Judicial Committee, International Law',
         frontImage: '/committees_images/icj_front.jpg',
         backImage: '/committees_images/icj_back.jpg',
@@ -213,7 +213,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Vedant Sunil Ghongade' },
           { designation: 'Rapporteur', name: 'Shruthi Andra' },
         ],
-        backgroundGuide: '/pdfs/unga_disec.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1TXhEnb9nMfjYc_uRuAmP8oTcb2CEThe9/view?usp=sharing',
         subInfo: 'General Committee, Peace & Security',
         frontImage: '/committees_images/unga_disec_front.jpg',
         backImage: '/committees_images/unga_disec_back.jpg',
@@ -229,7 +229,7 @@ const committeesData = [
           { designation: 'Vice-Chairperson', name: 'Aparna J S' },
           { designation: 'Rapporteur', name: 'Suhani Harit' },
         ],
-        backgroundGuide: '/pdfs/fgf.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1Ht33l0ovURutHh_XGjTZw6Q8AP8aR0TX/view?usp=sharing',
         subInfo: 'General Committee, Business & Geopolitics',
         frontImage: '/committees_images/fgf_front.jpg',
         backImage: '/committees_images/fgf_back.jpg',
@@ -244,7 +244,7 @@ const committeesData = [
           { designation: 'Chairperson', name: 'Vaibhav Chaitanya' },
           { designation: 'Vice-Chairperson', name: 'Dhriti Reddy Kourla' },
         ],
-        backgroundGuide: '/pdfs/mom.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1Ghkleztbup7Yk85TUjjRSr_bJU6pZ9zB/view?usp=sharing',
         subInfo: 'Fictional Committee, Harry potter & Wizard Affairs',
         frontImage: '/committees_images/mom_front.jpg',
         backImage: '/committees_images/mom_back.jpg',
@@ -259,7 +259,7 @@ const committeesData = [
           { designation: 'Co-Chairperson', name: 'Dhruv Shankar Banerjee' },
           { designation: 'Co-Chairperson', name: 'Sushmita Solanki' },
         ],
-        backgroundGuide: '/pdfs/incospar.pdf',
+        backgroundGuide: 'https://drive.google.com/file/d/1m7PjpYdGIT6DTZjGulSdtYms9bqoa0h9/view?usp=sharing',
         subInfo: ' Historic Committee, Science & Diplomacy',
         frontImage: '/committees_images/incospar_front.jpg',
         backImage: '/committees_images/incospar_back.jpg',
@@ -327,14 +327,14 @@ const CommitteeCard = ({ committee }) => {
               </p>
             )}
 
-            <div className="committee-eb">
+            {/* <div className="committee-eb">
               {committee.eb &&
                 committee.eb.map((member, i) => (
                   <div key={i} className="committee-eb-member">
                     <strong>{member.designation}</strong>: {member.name}
                   </div>
                 ))}
-            </div>
+            </div> */}
           </div>
 
           {/* bg guide button */}

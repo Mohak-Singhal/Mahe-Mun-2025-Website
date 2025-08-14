@@ -77,7 +77,7 @@ const teamMembers = [
 
 const webDevTeam = [
   { name: "Mohak Singhal", role: "USG Web Dev" },
-  { name: "Krishna Anand" },
+  { name: "Krishna Anand", role: "USG Web Dev" },
   { name: "Aaditya Jain" },
   { name: "Twinkle Tomar" },
   { name: "Hemanth Rajvardhan" },
@@ -106,7 +106,7 @@ const otherTeams = [
   { name: "A Gnanan", role: "USG Delegate Affairs" },
   { name: "Hardik Verma", role: "Head of PAV" },
   { name: "Koushik", role: "USG Photography" },
-  { name: "Keshav", role: "USG Videography" },
+  { name: "Additta", role: "USG Videography" },
   { name: "Ananya", role: "USG Content Writer" },
 ];
 
@@ -314,15 +314,21 @@ const Team = () => {
           </h2>
 
           {/* Centered Mohak Singhal */}
+          <div className="webdev-members-container">
           <div className="centered-member">
             <h3 className="member-name font-['Inter']">Mohak Singhal</h3>
             <p className="member-role font-['Inter']">USG Web Dev</p>
+          </div>
+          <div className="centered-member">
+            <h3 className="member-name font-['Inter']">Krishna Anand</h3>
+            <p className="member-role font-['Inter']">USG Web Dev</p>
+          </div>
           </div>
 
           {/* Team members row/column */}
           <div className="webdev-members-container">
             {webDevTeam
-              .filter((member) => member.name !== "Mohak Singhal")
+              .filter((member) => member.name !== "Mohak Singhal" && member.name !== "Krishna Anand")
               .map((member, index) => (
                 <div key={index} className="webdev-member">
                   <h3 className="webdev-name font-['Inter']">{member.name}</h3>
