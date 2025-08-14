@@ -5,10 +5,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const stats = [
-  { number: 250, label: "Delegates" },
-  { number: 25, label: "Executive Board Members" },
-  { number: 50, label: "Organizers" },
-  { number: 40, label: "Volunteers" },
+  { number: 700, label: "Delegates" },
+  { number: 60, label: "Executive Board Members" },
+  { number: 100, label: "Organizers" },
+  { number: 50, label: "Volunteers" },
 ];
 
 const teamMembers = [
