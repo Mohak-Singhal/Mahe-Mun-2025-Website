@@ -127,7 +127,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/oiac-mahe-93b338254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-xl hover:text-white transition-colors duration-200">
                   <FaLinkedin />
                 </a>
-              <a href="https://www.instagram.com/oiac_mahe?igsh=MXdqYTZ2aTZpNjdzZg==" className="text-xl hover:text-white transition-colors duration-200">
+              <a href="https://www.instagram.com/oiac_mahe?igsh=MXdqYTZ2aTZpNjdzZg==" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-white transition-colors duration-200">
                   <FaInstagram />
                 </a>
                 <a href="#" className="text-xl hover:text-white transition-colors duration-200">
