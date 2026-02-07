@@ -89,10 +89,10 @@ const Navbar = ({ classname }) => {
         {/* Register Button */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            to="https://forms.gle/iJQZPwbrVy6AjPdG6"
+            to="https://forms.gle/wQhPAdzTDhhJ5YAj7"
             className="hidden md:flex items-center bg-white text-black px-6 py-2.5 rounded-full font-semibold transition-all hover:bg-gray-100 shadow-md hover:shadow-lg"
           >
-            REGISTER
+            REGISTER FOR GAUNTLET
             <span className="ml-2 group-hover:rotate-45 transition-transform">↗</span>
           </Link>
         </motion.div>
@@ -180,11 +180,11 @@ const Navbar = ({ classname }) => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  to="https://forms.gle/iJQZPwbrVy6AjPdG6"
+                  to="https://forms.gle/wQhPAdzTDhhJ5YAj7"
                   className="bg-white text-black px-8 py-3 rounded-full font-semibold transition-all hover:bg-gray-100 shadow-lg hover:shadow-xl"
                   onClick={() => setIsOpen(false)}
                 >
-                  REGISTER  ↗
+                  REGISTER FOR GAUNTLET  ↗
                 </Link>
               </motion.div>
             </motion.div>

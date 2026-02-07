@@ -63,21 +63,21 @@ const Footer = () => {
                   {/* Email */}
                   {/* <p className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors">Director External Affairs</p> */}
                   <a
-                    href="mailto:siddhi.docmpl2023@learner.manipal.edu"
+                    href="mailto:mun.mahe@manipal.edu"
                     className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors"
                   >
                     {" "}
                     {/* ← Flex alignment */}
                     <FaEnvelope className="text-white" />
-                    siddhi.docmpl2023@learner.manipal.edu
+                    mun.mahe@manipal.edu
                   </a>
                   {/* Phone */}
                   <a
                     href="tel:+919810026430"
                     className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors"
                   >
-                    <FaPhone className="text-white transform rotate-90" />
-                    +91 9810026430
+                    {/* <FaPhone className="text-white transform rotate-90" />
+                    +91 9810026430 */}
                   </a>
                   {/* Address */}
                   <div className="flex flex-col items-center md:items-start gap-2">
